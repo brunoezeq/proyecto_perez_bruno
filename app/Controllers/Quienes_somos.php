@@ -2,12 +2,12 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+class Quienes_somos extends BaseController
 {
     public function index(): string
     {
         return view('front/header')
-         . view('front/principal')
+         . view('front/quienes_somos')
          . view('front/footer');            
     }
 }

@@ -1,0 +1,240 @@
+CRITICAL - 2025-04-08 12:00:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front(header.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front(header.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front(header', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('front(header')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:00:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front(header.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front(header.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front(header', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('front(header')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:01:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front(header.php"
+[Method: GET, Route: principal]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front(header.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front(header', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('front(header')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:01:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front(header.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front(header.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front(header', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('front(header')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:20:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:21:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:21:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:23:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:23:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:23:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: principal]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:23:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: principal]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:26:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:27:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:32:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:32:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:33:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 12:34:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/principal.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/principal.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/principal', [], true)
+ 3 APPPATH\Controllers\Home.php(10): view('front/principal')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 13:05:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "contacto.php"
+[Method: GET, Route: contacto]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('contacto.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('contacto', [], true)
+ 3 APPPATH\Controllers\Contacto.php(9): view('contacto')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Contacto->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 13:19:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/comercializacion.php"
+[Method: GET, Route: comercializacion]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/comercializacion.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/comercializacion', [], true)
+ 3 APPPATH\Controllers\Comercializacion.php(10): view('front/comercializacion')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Comercializacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Comercializacion))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-08 13:20:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "front/quienes_somos.php"
+[Method: GET, Route: quienes_somos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/quienes_somos.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/quienes_somos', [], true)
+ 3 APPPATH\Controllers\Quienes_somos.php(10): view('front/quienes_somos')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Quienes_somos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Quienes_somos))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

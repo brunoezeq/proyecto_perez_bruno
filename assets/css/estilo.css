@@ -1,13 +1,25 @@
  body {  
-    background-color: rgb(255, 252, 239); /*color de fondo del body*/  
+    background-color: white; /*color de fondo del body*/  
 } 
 
 /* BARRA DE NAV. */
-.container-fluid{
-    background-color: rgb(133, 2, 33);
-}
 
 .container-fluid a{
-    color: white;
+    color: black;
     font-size: 18px;
 }
+
+/* PRINCIPAL */
+
+
+
+/* FOOTER */
+
+.footer{
+    background-color: rgb(156, 241, 148);
+}
+
+
+
+
+

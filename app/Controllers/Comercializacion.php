@@ -2,12 +2,12 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+class Comercializacion extends BaseController
 {
     public function index(): string
     {
         return view('front/header')
-         . view('front/principal')
+         . view('front/comercializacion')
          . view('front/footer');            
     }
 }

@@ -2,10 +2,12 @@
 
 namespace App\Controllers;
 
-class Contactp extends BaseController
+class Contacto extends BaseController
 {
     public function index()
     {
-        return view('contacto');
+        return view('front/header')
+         . view('front/contacto')
+         . view('front/footer'); 
     }
 }
