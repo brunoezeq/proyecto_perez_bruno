@@ -1,7 +1,7 @@
 <!DOCTYPE html>  
 <html>  
 <head>  
-<title>Nombre</title>  
+<title><?= $titulo ?> </title>  
 <meta name="viewport" content="width=device-width, initialscale=1,  
 shrink-to-fit=no"> 
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
