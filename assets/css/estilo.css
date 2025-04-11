@@ -1,24 +1,81 @@
- body {  
-    background-color: white; /*color de fondo del body*/  
-} 
-
 /* BARRA DE NAV. */
 
+.container-fluid{
+ background-color: #143d33;
+}
+
+.container-fluid img{ /*logo*/
+    height: 85px;
+}
+
 .container-fluid a{
-    color: black;
-    font-size: 18px;
+    color: rgb(243, 239, 239);
+    font-size: 20px;
+    font-family: 'cormorant';
+    font-weight: bold;
+}
+
+.container-fluid lu{
+    text-align: right;
 }
 
 /* PRINCIPAL */
 
+body {  
+    background-color: white; /*color de fondo del body*/  
+} 
 
+
+
+/* ----- productos destacados ----- */
+
+.prod-destacados h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'cormorant';
+    padding-top: 25px;
+    color: #143d33;
+}
+.prod-destacados .container{
+    padding-bottom: 25px;
+}
+.prod-destacados img{
+    height: 400px;
+}
+
+/* ----- sección información ----- */
+.info-cafe h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'cormorant';
+    color: #143d33;
+}
+.info-cafe img{
+    height: 250px;
+    padding-top: 15px;
+}
 
 /* FOOTER */
 
 .footer{
-    background-color: rgb(156, 241, 148);
+    background-color: #143d33;
 }
 
+.footer ul{
+    list-style: none;
+}
+
+.footer img{
+    height: 20px;
+}
+
+.footer h3{
+    font-size: 18px;
+    color: white;
+    padding-top: 5px;
+}
 
 
 
