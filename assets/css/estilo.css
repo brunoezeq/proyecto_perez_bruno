@@ -65,6 +65,11 @@ body {
 
 .footer ul{
     list-style: none;
+    display: flex;
+}
+
+.footer a{
+    padding: 10px;
 }
 
 .footer img{
@@ -72,9 +77,10 @@ body {
 }
 
 .footer h3{
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'cormorant';
     color: white;
-    padding-top: 5px;
+    padding-top: 15px;
 }
 
 
