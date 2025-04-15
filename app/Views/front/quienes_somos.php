@@ -1,11 +1,11 @@
-<div class="">
+<div class="info-nosotros">
       <h2>BIENVENIDOS</h2>
       <p class="col-12"> Somos XPRESSO S.A tu tienda de café más confiable.
         Déjate seducir por el aroma irresistible y el sabor incomparable del café de calidad que hemos perfeccionado durante una década en la industria. En XPRESSO, fusionamos pasión y experiencia para ofrecerte la taza perfecta de café en cada sorbo.
         Desde 2014, hemos estado sirviendo la excelencia en cada grano, brindándote no solo una bebida, sino una experiencia que despierta tus sentidos y enriquece tus momentos cotidianos.
         Descubre nuestra variedad de cafés cuidadosamente seleccionados, desde los matices suaves hasta los tostados intensos, que te transportarán a un viaje sensorial único en cada taza.
         XPRESSO Sabor que despierta tus sentidos.</p>
-        <img src="assets/img/cafeteria.jpeg" alt="local-fisico">
+        <img src="" alt="local-fisico">
 
       <div class="info-myv row">
         <div class="tipo-1 col-sm-12 col-md-6 col-lg-6">

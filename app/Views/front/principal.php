@@ -1,17 +1,4 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-<title><?= $titulo ?> </title>  
-<meta name="viewport" content="width=device-width, initialscale=1,  
-shrink-to-fit=no"> 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-<link href="assets/css/estilo.css" rel="stylesheet" > 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-</head>  
 
-<body>
   <img class="img-fluid" src="assets/img/bienvenida.png" alt="cartel-bienvenida">   
   
   <div class= "prod-destacados"> 
@@ -52,6 +39,7 @@ shrink-to-fit=no">
     </div>
   </div>
 
+  
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner container-fluid">
     <div class="carousel-item active">
@@ -74,6 +62,7 @@ shrink-to-fit=no">
   </button>
 </div>
 
+
   <div class="container text-center info-cafe">
   <h2>Descubrí la mejor preparación para vos</h2>
   <div class="row">
@@ -91,11 +80,6 @@ shrink-to-fit=no">
     </div>
   </div>
 </div>
-
-
-</div>
-</body>  
-</html>
 
 
 
