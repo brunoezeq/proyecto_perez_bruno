@@ -1,46 +1,66 @@
-<div class="termyusos">
-    <h2>TERMINOS Y USOS</h2>
-    <p> En Xpresso, nos enorgullecemos de ofrecerte una experiencia excepcional en la compra de café de especialidad, directamente desde la comodidad de tu hogar. Nuestra página web está diseñada para brindarte información detallada sobre nuestros servicios, políticas y procedimientos, para que puedas disfrutar de tu café favorito con total tranquilidad. </p>
+<div class="container py-5 terminos_y_usos">
+  <h1 class="text-center mb-5">Términos y Usos</h1>
 
-    <div class="info-termyusos">
-      <div class="tipo-2">   
-        <h3>Servicos Ofrecidos</h3>
-        <p class="uno">  
-          <strong>Selección Curada</strong>: Descubre una amplia variedad de café de especialidad proveniente de Colombia, Guatemala, Nicaragua, Etiopía, Kenia y más.
-          <strong>Suscripción Mensual</strong>: Únete a nuestro club de suscripción para recibir tus granos de café favoritos automáticamente cada mes, con descuentos exclusivos y envío gratuito.
-          <strong>Envío Internacional</strong>: Enviamos nuestro café a clientes en todo el mundo, para que puedas disfrutar de la calidad de Xpresso sin importar dónde te encuentres.
-        </p>
-      </div>  
-      <div class="tipo-2">   
-        <h3>Política de Privacidad</h3>
-        <p> 
-          <strong>Protección de Datos</strong>: En Xpresso, valoramos tu privacidad y nos comprometemos a proteger tus datos personales. Utilizamos medidas de seguridad avanzadas para garantizar la seguridad de tu información en todo momento.
-          <strong>Uso de Cookies</strong>: Nuestra página web utiliza cookies para mejorar tu experiencia de navegación y personalizar el contenido según tus preferencias. Puedes ajustar la configuración de cookies en cualquier momento desde tu navegador.
-        </p>
-      </div>    
-      <div class="tipo-2">   
-        <h3>Procedimientos de Venta</h3>
-        <p> 
-          <strong>Selección de Productos</strong>: Explora nuestra tienda en línea y selecciona los productos que deseas comprar, incluyendo variedades de café, accesorios y más.
-          <strong>Carrito de Compras</strong>: Agrega tus productos al carrito de compras y procede al pago seguro a través de nuestro sistema de pago en línea.
-          <strong>Confirmación de Pedido</strong>: Una vez completado el pago, recibirás una confirmación de pedido por correo electrónico, junto con los detalles de tu compra y la información de envío.            
-        </p>
-      </div> 
-      <div class="tipo-2">   
-        <h3>Garantías y Soporte Postventa</h3>
-        <p> 
-          <strong>Garantía de Calidad</strong>: Nos comprometemos a ofrecerte café de la más alta calidad en cada compra. Si no estás completamente satisfecho con tu pedido, contáctanos y haremos todo lo posible para resolver cualquier problema.
-          <strong>Soporte al Cliente</strong>: Nuestro equipo de atención al cliente está disponible para ayudarte con cualquier consulta o inquietud que puedas tener antes, durante o después de tu compra. Puedes contactarnos por correo electrónico o a través de nuestro formulario de contacto en línea.
-        </p>
-      </div> 
-      <div class="tipo-2">   
-        <h3>Formas y Tiempo de Entrega</h3>
-        <p> 
-          <strong>Envío Rápido</strong>: Procesamos y enviamos los pedidos con la máxima rapidez posible, para que puedas disfrutar de tu café fresco en poco tiempo.
-          <strong>Opciones de Envío</strong>: Ofrecemos varias opciones de envío para adaptarnos a tus necesidades, incluyendo envío estándar y express.
-          <strong>Seguimiento de Envíos</strong>: Una vez que tu pedido ha sido enviado, recibirás un número de seguimiento para que puedas rastrear el estado de entrega en línea.
-        </p>
-      </div>  
+  <p class="lead text-center mb-4">
+    En <strong>Neighbourhood Café</strong>, buscamos brindarte una experiencia única en la compra y consumo de café. Este apartado está pensado para informarte sobre nuestros servicios, políticas y condiciones de uso.
+  </p>
+
+  <div class="row gy-4">
+    <div class="col-md-6">
+      <div class="p-4 bg-light rounded shadow-sm h-100">
+        <h4 class="fw-bold mb-3">Servicios Ofrecidos</h4>
+        <ul class="mb-0">
+          <li><strong>Selección de cafés especiales:</strong> variedades premium de distintos orígenes.</li>
+          <li><strong>Suscripciones mensuales:</strong> para que nunca te falte tu café favorito.</li>
+          <li><strong>Venta en tienda física y online:</strong> para que elijas cómo comprar.</li>
+        </ul>
+      </div>
     </div>
-        <p class="txt-p"> En Xpresso, nos esforzamos por superar tus expectativas en cada aspecto de tu experiencia de compra. ¡Gracias por elegirnos como tu destino virtual para café de especialidad!</p>
+
+    <div class="col-md-6">
+      <div class="p-4 bg-light rounded shadow-sm h-100">
+        <h4 class="fw-bold mb-3">Política de Privacidad</h4>
+        <ul class="mb-0">
+          <li><strong>Protección de datos:</strong> cuidamos tu información personal con responsabilidad.</li>
+          <li><strong>Uso de cookies:</strong> solo con fines de mejora de la experiencia del usuario.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="p-4 bg-light rounded shadow-sm h-100">
+        <h4 class="fw-bold mb-3">Procedimientos de Venta</h4>
+        <ul class="mb-0">
+          <li><strong>Selección de productos:</strong> accedé a nuestra tienda y elegí lo que necesitás.</li>
+          <li><strong>Pago seguro:</strong> realizá tu compra de forma protegida desde nuestro sitio.</li>
+          <li><strong>Confirmación de pedido:</strong> te enviamos todos los detalles por correo electrónico.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="p-4 bg-light rounded shadow-sm h-100">
+        <h4 class="fw-bold mb-3">Garantías y Soporte</h4>
+        <ul class="mb-0">
+          <li><strong>Calidad garantizada:</strong> si algo no es como esperabas, lo resolvemos.</li>
+          <li><strong>Soporte personalizado:</strong> escribinos y nuestro equipo te va a asistir.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="p-4 bg-light rounded shadow-sm">
+        <h4 class="fw-bold mb-3">Formas y Tiempos de Entrega</h4>
+        <ul class="mb-0">
+          <li><strong>Retiros en local:</strong> sin costo adicional.</li>
+          <li><strong>Envíos por correo o cadetería:</strong> según la zona y modalidad elegida.</li>
+          <li><strong>Seguimiento de envíos:</strong> te brindamos un número para rastrear tu pedido.</li>
+        </ul>
+      </div>
+    </div>
   </div>
+
+  <p class="text-center mt-5">
+    En <strong>Neighbourhood Café</strong> trabajamos para que tu experiencia sea excelente en cada paso. ¡Gracias por elegirnos!
+  </p>
+</div>

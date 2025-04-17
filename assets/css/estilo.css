@@ -83,14 +83,26 @@ body {
     padding-top: 15px;
 }
 
-/* nosotros */
+/* NOSOTROS */
 
-.info-nosotros h3 {
-    text-align: center;
-    font-family: 'cormorant';
-    color:#143d33;
+.quienes-somos h1, h2, h3, h4, h5{
+    color: #143d33;
 }
 
+.img-local {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+  
+
+/* COMERCIALIZACIÓN */
+
+.comercializacion, .terminos_y_usos h1, h4{
+    color: #143d33;
+}
 
 
 

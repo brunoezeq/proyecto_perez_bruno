@@ -1,38 +1,74 @@
-<div class="term_comercializacion">
-  <p>En XPRESSO, nos esforzamos por brindarte una experiencia de compra conveniente y segura. Para garantizar tu satisfacción, ofrecemos diversas opciones de pago, métodos de entrega y envío ágiles y confiables</p>
+<div class="container py-5 comercializacion">
+  <h1 class="text-center mb-4">Comercialización</h1>
 
-  <div class="medios-de-pago">
-    <h2>MEDIOS DE PAGO</h2>
-    <p><strong>Tarjetas de Crédito:</strong> Aceptamos todas las principales tarjetas de crédito, incluyendo Visa, MasterCard, American Express y más. Tu transacción estará protegida por los más altos estándares de seguridad.</p>
-    <div class="pagos-img">
-    <img src="assets/img/pago_credito.png" alt="tarjetas de crédito">
-    <p><strong>Tarjetas de Débito:</strong> También aceptamos tarjetas de débito, lo que te permite pagar de forma rápida y segura directamente desde tu cuenta bancaria.</p>
-    <img src="assets/img/pago_debito.png" alt="tarjetas de débito" >
-    <p><strong>Transferencia inmediata:</strong> Pago desde el tu Rapipago/Pago fácil mas cercano.</p>
-    <img src="assets/img/pago_efectivo.png" alt="efectivo">
-    </div>
-  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
 
-  <div class="medios-de-envio">
-    <h2> TIPOS DE ENVIO </h2>
-    <p>Ofrecemos distintos métodos de entrega para adaptarnos a tus necesidades:</p>
-    <p><strong>Envío a Domicilio</strong>: Entregamos tu pedido directamente en la dirección que nos indiques. Nuestro equipo se encargará de asegurar que tu compra llegue en perfectas condiciones y en el menor tiempo posible.</p>
-    <p><strong>Retiro en Sucursal</strong>: Si prefieres retirar tu compra personalmente, puedes seleccionar la opción de retiro en nuestra sucursal. Te avisaremos tan pronto como tu pedido esté listo para que puedas pasar a recogerlo.</p>
+          <p class="lead text-justify mb-4">
+            En Neighbourhood Café creemos en brindar no solo una experiencia de sabor,
+            sino también en generar vínculos duraderos con nuestros clientes. Comercializamos
+            café de especialidad, seleccionado cuidadosamente y en diferentes presentaciones,
+            tanto para consumidores finales como para distribuidores.
+          </p>
 
-    <div>
-      <h2>FORMAS DE ENVIO</h2>
-      <p>Trabajamos con servicios de envío confiables para garantizar que tu compra llegue a destino de manera segura y puntual:</p>
-      <p><strong>Envío Estándar</strong>: Nuestro servicio de envío estándar garantiza la entrega de tu pedido en un plazo razonable. Te proporcionaremos un número de seguimiento para que puedas rastrear tu paquete en todo momento.</p>
-      <p><strong>Envío Express</strong>: Si necesitas tu compra con urgencia, puedes optar por nuestro servicio de envío express. Te aseguramos una entrega rápida y eficiente para que disfrutes de tus productos lo antes posible.</p>
-      <p>Recibi tu pedido a tráves de los siguientes medios:</p>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="bg-light p-4 rounded h-100">
+                <h4 class="fw-bold">Tipos de entrega</h4>
+                <ul class="mb-0">
+                  <li>Retiro en local sin costo adicional</li>
+                  <li>Entrega a domicilio en zonas cercanas</li>
+                  <li>Envíos programados para pedidos recurrentes</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="envios-img">
-        <img src="assets/img/logo_oca.jpg" alt="envío oca">
-        <img src="assets/img/logo_correoArgentino.png" alt="envío correo argentino">
-        <img src="assets/img/logo_andreani.png" alt="envío andreani">     
+            <div class="col-md-6 mb-4">
+              <div class="bg-light p-4 rounded h-100">
+                <h4 class="fw-bold">Formas de envío</h4>
+                <ul class="mb-0">
+                  <li>Envíos por mensajería propia en Corrientes y Chaco</li>
+                  <li>Correo Argentino y OCA para el resto del país</li>
+                  <li>Envíos gratuitos a partir de compras mayores a $25.000</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+              <div class="bg-light p-4 rounded h-100">
+                <h4 class="fw-bold">Formas de pago</h4>
+                <ul class="mb-0">
+                  <li>Transferencia bancaria</li>
+                  <li>Mercado Pago</li>
+                  <li>Tarjetas de débito y crédito</li>
+                  <li>Pago en efectivo en el local</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+              <div class="bg-light p-4 rounded h-100">
+                <h4 class="fw-bold">Información adicional</h4>
+                <p class="mb-0">
+                  Ofrecemos descuentos por compras mayoristas y beneficios exclusivos para cafeterías
+                  y comercios que eligen revender nuestros productos. También realizamos envíos de regalos personalizados
+                  para fechas especiales.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-justify mt-4">
+            Nuestro objetivo es brindar una experiencia de compra simple, transparente y cercana,
+            cuidando cada detalle desde el pedido hasta la entrega. Si tenés alguna consulta,
+            no dudes en escribirnos. ¡Estamos para ayudarte!
+          </p>
+
+        </div>
       </div>
     </div>
   </div>
-
-  <p>En XPRESSO, nos comprometemos a ofrecerte una experiencia de compra sin contratiempos. Si tienes alguna pregunta sobre nuestras formas de pago, tipos de entrega o formas de envío, no dudes en ponerte en contacto con nuestro equipo de atención al cliente. ¡Estaremos encantados de ayudarte en todo lo que necesites!</p>
 </div>
+
