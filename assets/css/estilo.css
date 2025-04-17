@@ -25,8 +25,6 @@ body {
     background-color: white; /*color de fondo del body*/  
 } 
 
-
-
 /* ----- productos destacados ----- */
 
 .prod-destacados h2{
@@ -97,12 +95,40 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
   
-
 /* COMERCIALIZACIÓN */
 
 .comercializacion, .terminos_y_usos h1, h4{
     color: #143d33;
 }
 
+/* CONTACTO */
+
+.bg-verde-form {
+    background-color: #143d33;
+    color: white;
+    border: none;
+  }
+  
+  .form-control {
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
+  }
+  
+.form-control:focus {
+    border-color: #22c55e;
+    box-shadow: 0 0 5px rgba(34, 197, 94, 0.5);
+}
+  
+.form-label {
+    color: white;
+}
+
+.icono-verde {
+    color: #143d33 !important;
+}
+  
+  
+  
 
 
