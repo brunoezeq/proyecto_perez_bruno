@@ -1,134 +1,129 @@
 /* BARRA DE NAV. */
 
 .container-fluid{
- background-color: #143d33;
-}
-
-.container-fluid img{ /*logo*/
-    height: 85px;
-}
-
-.container-fluid a{
-    color: rgb(243, 239, 239);
-    font-size: 20px;
-    font-family: 'cormorant';
-    font-weight: bold;
-}
-
-.container-fluid lu{
-    text-align: right;
-}
-
-/* PRINCIPAL */
-
-body {  
-    background-color: white; /*color de fondo del body*/  
-} 
-
-/* ----- productos destacados ----- */
-
-.prod-destacados h2{
-    text-align: center;
-    font-weight: bold;
-    font-size: 50px;
-    font-family: 'cormorant';
-    padding-top: 25px;
-    color: #143d33;
-}
-.prod-destacados .container{
-    padding-bottom: 25px;
-}
-.prod-destacados img{
-    height: 400px;
-}
-
-/* ----- sección información ----- */
-.info-cafe h2{
-    text-align: center;
-    font-weight: bold;
-    font-size: 50px;
-    font-family: 'cormorant';
-    color: #143d33;
-}
-.info-cafe img{
-    height: 250px;
-    padding-top: 15px;
-}
-
-/* FOOTER */
-
-.footer{
     background-color: #143d33;
-}
-
-.footer ul{
-    list-style: none;
-    display: flex;
-}
-
-.footer a{
-    padding: 10px;
-}
-
-.footer img{
-    height: 20px;
-}
-
-.footer h3{
-    font-size: 20px;
-    font-family: 'cormorant';
-    color: white;
-    padding-top: 15px;
-}
-
-/* NOSOTROS */
-
-.quienes-somos h1, h2, h3, h4, h5{
-    color: #143d33;
-}
-
-.img-local {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-  
-/* COMERCIALIZACIÓN */
-
-.comercializacion, .terminos_y_usos h1, h4{
-    color: #143d33;
-}
-
-/* CONTACTO */
-
-.bg-verde-form {
-    background-color: #143d33;
-    color: white;
-    border: none;
-  }
-  
-  .form-control {
-    border: 1px solid #ccc;
-    background-color: white;
-    color: #333;
-  }
-  
-.form-control:focus {
-    border-color: #22c55e;
-    box-shadow: 0 0 5px rgba(34, 197, 94, 0.5);
-}
-  
-.form-label {
-    color: white;
-}
-
-.icono-verde {
-    color: #143d33 !important;
-}
-  
-  
-  
-
-
+   }
+   
+   .container-fluid img{ /*logo*/
+       height: 85px;
+   }
+   
+   .container-fluid a{
+       color: rgb(243, 239, 239);
+       font-size: 20px;
+       font-family: 'cormorant';
+       font-weight: bold;
+   }
+   
+   .container-fluid lu{
+       text-align: right;
+   }
+   
+   /* PRINCIPAL */
+   
+   body {  
+       background-color: white; /*color de fondo del body*/  
+   } 
+   
+   /* ----- productos destacados ----- */
+   
+   .prod-destacados h2{
+       text-align: center;
+       font-weight: bold;
+       font-size: 50px;
+       font-family: 'cormorant';
+       padding-top: 25px;  
+       color: #143d33;
+   }
+   .prod-destacados .container{
+       padding-bottom: 25px;
+   }
+   .prod-destacados img{
+       height: 300px;
+   }
+   
+   /* ----- sección información ----- */
+   .info-cafe h2{
+       text-align: center;
+       font-weight: bold;
+       font-size: 50px;
+       font-family: 'cormorant';
+       color: #143d33;
+   }
+   .info-cafe img{
+       height: 250px;
+       padding-top: 15px;
+   }
+   
+   /* FOOTER */
+   
+   .footer{
+       background-color: #143d33;
+   }
+   
+   .footer ul{
+       list-style: none;
+       display: flex;
+   }
+   
+   .footer a{
+       padding: 10px;
+   }
+   
+   .footer img{
+       height: 20px;
+   }
+   
+   .footer h3{
+       font-size: 20px;
+       font-family: 'cormorant';
+       color: white;
+       padding-top: 15px;
+   }
+   
+   /* NOSOTROS */
+   
+   .quienes-somos h1, h2, h3, h4, h5{
+       color: #143d33;
+   }
+   
+   .img-local {
+       width: 100%;
+       max-height: 400px;
+       object-fit: cover;
+       border-radius: 12px;
+       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+   }
+     
+   /* COMERCIALIZACIÓN */
+   
+   .comercializacion, .terminos_y_usos h1, h4{
+       color: #143d33;
+   }
+   
+   /* CONTACTO */
+   
+   .bg-verde-form {
+       background-color: #143d33;
+       color: white;
+       border: none;
+     }
+     
+     .form-control {
+       border: 1px solid #ccc;
+       background-color: white;
+       color: #333;
+     }
+     
+   .form-control:focus {
+       border-color: #22c55e;
+       box-shadow: 0 0 5px rgba(34, 197, 94, 0.5);
+   }
+     
+   .form-label {
+       color: white;
+   }
+   
+   .icono-verde {
+       color: #143d33 !important;
+   }

@@ -1,9 +1,8 @@
 
-  <img class="img-fluid" src="assets/img/bienvenida.png" alt="cartel-bienvenida">   
+  <img class="img-fluid" src="assets/img/bienvenida_copia.png" alt="cartel-bienvenida">   
   
-  <div class= "prod-destacados"> 
-    
-    <h2>Productos Destacados</h2>
+  <div class= "prod-destacados">
+    <h2 class="animate__animated animate__shakeX">Productos Destacados</h2>
 
     <div class="container text-center">
     <div class="row">
@@ -12,8 +11,8 @@
       <div class="card" style="width: 18rem;" >
       <img src="assets/img/bolsa_cafe_colombia.png" class="card-img-top" alt="">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Cafe Colombiano</h5>
+          <a href="#" class="btn btn-primary">+ info / comprar</a>
         </div>
       </div>
     </div>
@@ -22,8 +21,8 @@
       <div class="card" style="width: 18rem;">
       <img src="assets/img/bolsa_cafe_kenya.png" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Cafe Keniano</h5>
+          <a href="#" class="btn btn-primary">+ info / comprar</a>
         </div>
       </div>
     </div>
@@ -32,8 +31,8 @@
       <div class="card" style="width: 18rem;">
       <img src="assets/img/bolsa_cafe_guatemala.png" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Cafe Guatemalteco</h5>
+          <a href="#" class="btn btn-primary">+ info / comprar</a>
         </div>
       </div>
     </div>
@@ -68,15 +67,15 @@
   <div class="row">
     <div class="col-lg-4 col-md-12 col-sm-12">
       <img src="assets/img/cafe_latte.jpeg" alt="">
-      <p>El café late es la mejor ...</p>
+      <p>El<strong> café latte </strong>de sabor sutil y equilibrado, donde la intensidad del espresso se complementa con la textura cremosa de la leche.</p>
     </div>
     <div class="col-lg-4 col-md-12 col-sm-12">
     <img src="assets/img/cafe_expreso.jpeg" alt="">
-    <p>El café espreso es la mejor ...</p>
+    <p>El <strong>café espresso</strong> de rápida preparación a una alta presión y por un sabor y textura más concentrados.</p>
     </div>
     <div class="col-lg-4 col-md-12 col-sm-12">
     <img src="assets/img/cafe_cortado.jpeg" alt="">
-    <p>El café cortado es la mejor ...</p>
+    <p>El <strong>café cortado </strong>consiste en un espresso mezclado con una cantidad aproximadamente igual de leche tibia para reducir la acidez</p>
     </div>
   </div>
 </div>
