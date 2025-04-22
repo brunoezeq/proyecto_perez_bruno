@@ -1,7 +1,7 @@
 <!DOCTYPE html>  
 <html>  
 <head>  
-<title>Neighbourhood Café></title>  
+<title><?php echo $titulo ?> </title>                                     
 <meta name="viewport" content="width=device-width, initialscale=1,  
 shrink-to-fit=no"> 
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
