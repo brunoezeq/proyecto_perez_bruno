@@ -28,7 +28,7 @@
     </div>
 
     <!-- Información de contacto -->
-    <div class="col-md-6 d-flex">
+    <div class="col-md-6 d-flex info-contacto">
       <div class="bg-white shadow rounded p-4 text-black w-100">
         <p>
           Somos Neighbourhood Café S.R.L, a cargo de Abraham Sanchez y Bruno Pérez. Nuestro objetivo es ofrecer una experiencia cálida y auténtica, donde cada taza cuente una historia y cada cliente se sienta como en casa. No dudes en dejarnos tu mensaje.

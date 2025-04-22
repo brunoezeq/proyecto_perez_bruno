@@ -32,7 +32,7 @@ $routes->get('contacto', 'Home::contacto');                             /* modif
 $routes->get('comercializacion', 'Home::comercializacion');             /* MODIF */
 $routes->get('terminos_y_usos', 'Home::terminos');                      /* MODIF  */
 $routes->get('quienes_somos', 'Home::somos');                           /*  <------- MODIFICO PROFE  */
-
+$routes->get('proximamente', 'Home::proximamente');   
 
 
 

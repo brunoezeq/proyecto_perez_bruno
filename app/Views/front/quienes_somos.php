@@ -51,7 +51,7 @@
       </p>
     </div>
     <div class="col-md-6">
-      <img src="assets/img/local2.jpg" alt="Otra imagen del local" class="img-local">
+      <img src="assets/img/cartel.jpg" alt="Otra imagen del local" class="img-local">
     </div>
   </div>
 

@@ -22,7 +22,7 @@ class Home extends BaseController
 
     public function terminos(): string
     {
-        $data["titulo"] = "Terminos y usos";
+        $data["titulo"] = "Terminos y Usos";
         return view('front/header', $data)
          . view('front/terminos_y_usos')
          . view('front/footer');            
@@ -43,4 +43,11 @@ class Home extends BaseController
          . view('front/contacto')
          . view('front/footer'); 
     }
+
+    public function proximamente(): string
+    {
+        $data["titulo"] = "Proximamente";
+        return view('front/proximamente');
+    }
 }
+

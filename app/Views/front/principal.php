@@ -1,4 +1,4 @@
-
+<!-- 
   <img class="img-fluid" src="assets/img/bienvenida_copia.png" alt="cartel-bienvenida">   
   
   <div class= "prod-destacados">
@@ -9,30 +9,30 @@
 
     <div class="col">
       <div class="card" style="width: 18rem;" >
-      <img src="assets/img/bolsa_cafe_colombia.png" class="card-img-top" alt="">
+      <img src="assets/img/cafe_colombia.jpg" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Cafe Colombiano</h5>
-          <a href="#" class="btn btn-primary">+ info / comprar</a>
+          <a href= "<?php echo base_url("proximamente");?>" class="btn btn-primary">+ info / comprar</a>
         </div>
       </div>
     </div>
 
     <div class="col">
       <div class="card" style="width: 18rem;">
-      <img src="assets/img/bolsa_cafe_kenya.png" class="card-img-top" alt="...">
+      <img src="assets/img/cafe_nicaragua.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Cafe Keniano</h5>
-          <a href="#" class="btn btn-primary">+ info / comprar</a>
+          <a href= "<?php echo base_url("proximamente");?>" class="btn btn-primary">+ info / comprar</a>
         </div>
       </div>
     </div>
 
     <div class="col">
       <div class="card" style="width: 18rem;">
-      <img src="assets/img/bolsa_cafe_guatemala.png" class="card-img-top" alt="...">
+      <img src="assets/img/cafe_costarica.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Cafe Guatemalteco</h5>
-          <a href="#" class="btn btn-primary">+ info / comprar</a>
+          <a href= "<?php echo base_url("proximamente");?>" class="btn btn-primary">+ info / comprar</a>
         </div>
       </div>
     </div>
@@ -78,7 +78,48 @@
     <p>El <strong>café cortado </strong>consiste en un espresso mezclado con una cantidad aproximadamente igual de leche tibia para reducir la acidez</p>
     </div>
   </div>
-</div>
+</div> -->
 
+
+
+<div class="container my-5">
+  <h2 class="text-center mb-4 fw-bold text-success">Nuestros Cafés</h2>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <!-- Tarjeta 1 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="assets/img/cafe_expreso.jpeg" class="card-img-top" alt="Café Colombia">
+        <div class="card-body">
+          <h5 class="card-title fw-bold text-success">Café Colombia</h5>
+          <p class="card-text">Origen: Colombia<br>Tipo: Expreso<br>Peso: 250g<br>Tostado: Medio</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="assets/img/cafe_latte.jpeg" class="card-img-top" alt="Café Brasil">
+        <div class="card-body">
+          <h5 class="card-title fw-bold text-success">Café Brasil</h5>
+          <p class="card-text">Origen: Brasil<br>Tipo: Molido<br>Peso: 250g<br>Tostado: Alto</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="assets/img/cafe_cortado.jpeg" class="card-img-top" alt="Café Guatemala">
+        <div class="card-body">
+          <h5 class="card-title fw-bold text-success">Café Guatemala</h5>
+          <p class="card-text">Origen: Guatemala<br>Tipo: Molido<br>Peso: 250g<br>Tostado: Bajo</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 

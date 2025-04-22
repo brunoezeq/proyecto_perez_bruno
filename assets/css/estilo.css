@@ -57,34 +57,25 @@
    
    /* FOOTER */
    
-   .footer{
-       background-color: #143d33;
-   }
-   
-   .footer ul{
-       list-style: none;
-       display: flex;
-   }
-   
-   .footer a{
-       padding: 10px;
-   }
-   
-   .footer img{
-       height: 20px;
-   }
-   
-   .footer h3{
-       font-size: 20px;
-       font-family: 'cormorant';
-       color: white;
-       padding-top: 15px;
+.footer{
+    background-color: #143d33;
+    width: 100%;
+    max-width: 100%;
+}
+
+   .footer .suscripcion h5, p, a{
+        color: white;
    }
    
    /* NOSOTROS */
    
    .quienes-somos h1, h2, h3, h4, h5{
        color: #143d33;
+   }
+
+   .quienes-somos p{
+        text-align: justify;
+        color: black;
    }
    
    .img-local {
@@ -99,6 +90,10 @@
    
    .comercializacion, .terminos_y_usos h1, h4{
        color: #143d33;
+   }
+
+   .comercializacion p{
+    color: black;
    }
    
    /* CONTACTO */
@@ -126,4 +121,14 @@
    
    .icono-verde {
        color: #143d33 !important;
+   }
+
+   .info-contacto p{
+    color: black;
+   }
+
+   /* TERMINOS Y USOS */
+
+   .terminos_y_usos p{
+     color: black;
    }

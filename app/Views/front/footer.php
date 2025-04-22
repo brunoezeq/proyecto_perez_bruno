@@ -1,16 +1,36 @@
-<footer class="footer">
-    
-    <div class="footer-content container">
-      <div class="link">
-        <h3>Nuestras redes</h3>
-        <ul>
-          <li><a href="https://www.instagram.com/" target="_blank"> <img src="assets/img/ig.png"> </a></li>
-          <li><a href="https://twitter.com/?lang=es" target="_blank"> <img src="assets/img/x.png"></a></li>
-          <li><a href="https://www.facebook.com/?locale=es_LA" target="_blank"> <img src="assets/img/facebook.png"> </a></li>
-        </ul>
-      </div>   
-    </div>  
- 
+<footer class="bg-dark text-white mt-5 footer">
+  
+  <div class="container-fluid  py-4">
+    <div class="row">
+      
+      <!-- Suscripción -->
+      <div class="text-center col-md-6 offset-md-1 px-4 suscripcion">
+        <h5 class="text-uppercase">Suscribite</h5>
+        <p>Recibi las ofertas exclusivas para la web.</p>
+        <form>
+          <div class="mb-2">
+            <input type="email" class="form-control" placeholder="Email" required>
+          </div>
+          <button type="submit" class="btn btn-outline-light w-100">Subscribirse</button>
+        </form>
+      </div>
+
+      <!-- Redes Sociales -->
+      <div class="col-md-4 text-md-end">
+        <h5 class="text-uppercase text-white">Seguinos</h5>
+        <a href="https://www.instagram.com/" target="_blank" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/?locale=es_LA" target="_blank" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+      </div>
+
+    </div>
+
+    <!-- Línea inferior -->
+    <div class="text-center pt-4 mt-4 border-top border-secondary">
+      <p class="mb-0 small">Copyright © Neighbourhood 2025 </p>
+    </div>
+  </div>
+
+    <!-- botón -->
     <a href="#" id="btn-top" class="btn btn-primary position-fixed bottom-0 end-0 m-4" style="display: none; z-index: 999;
           background-color: white;
           color: #143d33;
