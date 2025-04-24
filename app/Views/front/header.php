@@ -5,15 +5,12 @@
 <meta name="viewport" content="width=device-width, initialscale=1,  
 shrink-to-fit=no"> 
 <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/css/estilo.css" rel="stylesheet" > 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link href="assets/css/estilo.css" rel="stylesheet" >
+<link rel="icon" type="image/png" href="assets/img/icono.png">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>  
-
-
 </head>  
+
 <body>  
 
 <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary p-0 m-0">

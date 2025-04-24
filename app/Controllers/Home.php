@@ -6,7 +6,7 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        $data["titulo"] = "Neighbourhood Cafe";
+        $data["titulo"] = "Neighbourhood Café";
         return view('front/header', $data)         /*   */
          . view('front/principal')
          . view('front/footer');            
