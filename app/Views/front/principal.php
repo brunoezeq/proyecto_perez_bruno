@@ -1,25 +1,13 @@
 <!-- Banner bienvenida -->
 
-<div class="container-fluid p-0">
-  <section class="custom-banner position-relative">
-    <img src="assets/img/barista.jpg" alt="Banner Café" class="img-fluid w-100 banner-bg">
-
-    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-5">
-            <div class="text-content text-dark">
-              <h2 class="fw-bold">NEIGHBOURHOOD</h2>
-              <p>encontra el mejor café para vos</p>
-              <a href="#" class="btn btn-dark mt-2">Ver Más</a>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="banner">
+    <img src="assets/img/banner.png" alt="banner bienvenida">
+    <div class="banner-text">
+      <h1>Neighbourhood</h1>
+      <p>descubrí el mejor café para vos</p>
+      <a href= "<?php echo base_url("proximamente");?>" class="btn btn-verde">Conocer más</a>
     </div>
-  </section>
-</div>
-
+  </div>
 
 <!-- Productos destacados -->
 <div class="container my-5">
@@ -69,13 +57,13 @@
   <div id="carouselExampleAutoplaying" class="carousel slide rounded overflow-hidden mx-auto" style="max-width: 1500px;" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="assets/img/carrusel1.png" class="d-block w-100" alt="...">
+        <img src="assets/img/carrusel_2.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="assets/img/.png" class="d-block w-100" alt="...">
+        <img src="assets/img/carrusel_1.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="assets/img/" class="d-block w-100" alt="...">
+        <img src="assets/img/carrusel_3.png" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
