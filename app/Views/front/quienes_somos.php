@@ -1,5 +1,5 @@
 <div class="container py-5 quienes-somos">
-  <!-- Título -->
+  
   <h1 class="text-center mb-5">¿Quiénes Somos?</h1>
 
   <!-- Imagen a la izquierda y texto a la derecha -->
@@ -40,7 +40,7 @@
     </div>
   </div>
 
-  <!-- Imagen derecha y texto izquierdo -->
+  <!-- Imagen derecha y texto a la izquierda -->
   <div class="row align-items-center mb-5">
     <div class="col-md-6">
       <h3>¿Por qué elegirnos?</h3>

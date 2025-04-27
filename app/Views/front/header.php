@@ -4,15 +4,16 @@
 <title><?php echo $titulo ?> </title>                                     
 <meta name="viewport" content="width=device-width, initialscale=1,  
 shrink-to-fit=no"> 
-<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/css/estilo.css" rel="stylesheet" >
-<link rel="icon" type="image/png" href="assets/img/icono.png">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>  
+<link href="assets/css/bootstrap.min.css" rel="stylesheet"> <!-- enlace boostrap-->
+<link href="assets/css/estilo.css" rel="stylesheet" > <!-- enlace hoja de estilos-->
+<link rel="icon" type="image/png" href="assets/img/icono.png"> <!-- enlace icono -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> <!-- enlace iconos boostrap-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>  <!-- enlace iconos boostrap-->
 </head>  
 
 <body>  
 
+<!-- Menú -->
 <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary p-0 m-0">
     <div class="container-fluid">
       <a class="navbar-brand" href= "<?php echo base_url("principal");?>"><img src="assets/img/logo.png" alt="logo"></a>

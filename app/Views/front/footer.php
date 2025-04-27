@@ -30,7 +30,7 @@
     </div>
   </div>
 
-    <!-- botón -->
+    <!-- botón para subir -->
     <a href="#" id="btn-top" class="btn btn-primary position-fixed bottom-0 end-0 m-4" style="display: none; z-index: 999;
           background-color: white;
           color: #143d33;
@@ -57,7 +57,7 @@
         });
     </script>
 
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script> <!-- enlace boostrap-->
  </footer>
 </body>  
 </html>

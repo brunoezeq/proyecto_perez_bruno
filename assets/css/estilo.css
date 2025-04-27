@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+ 
+/* BANNER */  
 .banner {
     position: relative;
     width: 100%;
@@ -81,7 +82,7 @@
 /* PRINCIPAL */
    
 body {  
-    background-color: white; /*color de fondo del body*/  
+    background-color: #f6f3ec;  
 } 
    
 .titulo-seccion{

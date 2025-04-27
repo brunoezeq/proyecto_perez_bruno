@@ -1,5 +1,4 @@
 <!-- Banner bienvenida -->
-
 <div class="banner">
     <img src="assets/img/banner.png" alt="banner bienvenida">
     <div class="banner-text">
@@ -49,10 +48,7 @@
   </div>
 </div>
 
-
-
 <!-- Carrusel -->
-
 <div class="container my-4">
   <div id="carouselExampleAutoplaying" class="carousel slide rounded overflow-hidden mx-auto" style="max-width: 1500px;" data-bs-ride="carousel">
     <div class="carousel-inner">

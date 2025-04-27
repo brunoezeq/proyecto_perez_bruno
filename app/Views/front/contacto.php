@@ -37,7 +37,6 @@
         <div class="container mt-4">
           <div class="row row-cols-1 row-cols-md-2 g-4">
 
-            <!-- Teléfono -->
             <div class="col d-flex align-items-start">
               <i class="bi bi-telephone-fill fs-3 me-3 icono-verde"></i>
               <div>
@@ -46,7 +45,6 @@
               </div>
             </div>
 
-            <!-- Email -->
             <div class="col d-flex align-items-start">
               <i class="bi bi-envelope-fill fs-3 me-3 icono-verde"></i>
               <div>
@@ -55,7 +53,6 @@
               </div>
             </div>
 
-            <!-- WhatsApp -->
             <div class="col d-flex align-items-start">
               <i class="bi bi-whatsapp fs-3 me-3 icono-verde"></i>
               <div>
@@ -64,7 +61,6 @@
               </div>
             </div>
 
-            <!-- Dirección -->
             <div class="col d-flex align-items-start">
               <i class="bi bi-geo-alt-fill fs-3 me-3 icono-verde"></i>
               <div>
@@ -75,7 +71,7 @@
           </div>
         </div>
 
-        <!-- Mapa más grande -->
+        <!-- Mapa -->
         <div class="mt-4">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.090215350972!2d-58.83478922525127!3d-27.46645061656643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456ca6d24ec0c9%3A0xb92ce3fedb0d7729!2sFacultad%20de%20Ciencias%20Exactas%20y%20Naturales%20y%20Agrimensura!5e0!3m2!1ses-419!2sar!4v1744890477040!5m2!1ses-419!2sar"
             width="100%" height="300" style="border:0;" allowfullscreen></iframe>
