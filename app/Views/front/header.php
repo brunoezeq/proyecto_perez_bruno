@@ -34,6 +34,15 @@ shrink-to-fit=no">
           <li class="nav-item">
             <a class="nav-link" href= "<?php echo base_url("terminos_y_usos");?>">Términos y Usos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href= "<?php echo base_url("catalogo");?>"><i class="bi bi-cart"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href= "<?php echo base_url("registro");?>"><i class="bi bi-person-plus"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href= "<?php echo base_url("login");?>"><i class="bi-box-arrow-in-right"></i></a>
+          </li>
         </ul>
       </div>
     </div>

@@ -182,8 +182,39 @@ body {
     color: black;
    }
 
-   /* TERMINOS Y USOS */
+   /* -------- TERMINOS Y USOS -------- */
 
    .terminos_y_usos p{
      color: black;
    }
+
+/* -------- CATÁLOGO -------- */
+
+.catalogo p{
+    color: black;
+}
+
+.catalogo .img-catalogo{
+    height: 480px;
+}
+
+.catalogo h2{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+/* -------- REGISTRO -------- */
+
+.form-registro{
+    padding-top: 2.5rem;
+    justify-content: center;
+}
+
+.form-registro h2{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 4px 4px; 
+}
