@@ -67,5 +67,6 @@ class Home extends BaseController
          . view('front/login')
          . view('front/footer');
     }
+
 }
 

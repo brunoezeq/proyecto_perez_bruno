@@ -15,7 +15,7 @@
           </div>
           <div class="mb-3">
             <label class="form-label">Usuario</label>
-            <input type="email" class="form-control" placeholder="Usuario" required>
+            <input type="text" class="form-control" placeholder="Usuario" required>
           </div>
           <div class="mb-3">
             <label class="form-label">Contraseña</label>
