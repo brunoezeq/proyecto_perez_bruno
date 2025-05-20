@@ -218,3 +218,10 @@ body {
     text-align: center;
     padding: 4px 4px; 
 }
+
+.mi-alerta {
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}

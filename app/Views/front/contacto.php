@@ -2,29 +2,47 @@
   <div class="row align-items-stretch">
 
     <!-- Formulario -->
+    <?php echo form_open('consulta') ?>
     <div class="col-md-6 d-flex">
       <div class="bg-verde-form p-4 rounded text-white w-100 shadow">
         <h2 class="fw-bold text-white mb-4">Contactate con nosotros</h2>
+
+        <?php if(!empty($validation)): ?>
+          <div class="mi-alerta" role="alert">
+            <ul>
+              <?php foreach ($validation as $error) : ?>
+                <li> <?= esc($error) ?> </li>
+                <?php endforeach ?>
+            </ul>
+          </div>
+        <?php endif ?>
+
+        <?php if(session('mensaje_consulta')){
+          echo session('mensaje_consulta');
+        } ?>
+        
         <form class="formulario">
           <div class="mb-3">
-            <label class="form-label text-white">Nombre</label>
-            <input type="text" class="form-control" placeholder="Nombre..." required>
+            <label for="nombre" class="form-label text-white">Nombre</label>
+            <?php echo form_input (['name' => "nombre", 'id' => 'nombre', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Nombre", 'value'=> set_value('nombre_consulta')]); ?>
           </div>
           <div class="mb-3">
             <label class="form-label text-white">Email</label>
-            <input type="email" class="form-control" placeholder="ejemplo@gmail.com" required>
+            <?php echo form_input (['name' => "mail", 'id' => 'mail', 'type' => 'text', 'class' => "form-control", 'placeholder' => "ejemplo@gmmail.com", 'value'=> set_value('mail_consulta')]); ?>
           </div>
           <div class="mb-3">
             <label class="form-label text-white">Asunto</label>
-            <input type="text" class="form-control" placeholder="Asunto..." required>
+            <?php echo form_input (['name' => "asunto", 'id' => 'asunto', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Asunto", 'value'=> set_value('asunto_consulta')]); ?>
           </div>
           <div class="mb-3">
             <label class="form-label text-white">Consulta</label>
-            <textarea class="form-control" rows="4" placeholder="Consulta..." required></textarea>
+            <?php echo form_textarea (['name' => "consulta", 'id' => 'consulta', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Asunto", 'value'=> set_value('consulta')]); ?>
           </div>
-          <button type="submit" class="btn btn-outline-light w-100">Enviar</button>
+          <?php echo form_submit('Consulta', 'Enviar', "class= 'btn btn-outline-light w-100'"); ?>
         </form>
       </div>
+
+        <?php echo form_close(); ?>
     </div>
 
     <!-- Información de contacto -->

@@ -52,7 +52,7 @@ class Home extends BaseController
          . view('front/footer');
     }
 
-    public function registro(): string
+/*     public function registro(): string
     {
         $data["titulo"] = "Registro";
         return view('front/header', $data)
@@ -66,7 +66,7 @@ class Home extends BaseController
         return view('front/header', $data)
          . view('front/login')
          . view('front/footer');
-    }
+    } */
 
 }
 
