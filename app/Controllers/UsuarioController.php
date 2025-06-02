@@ -126,6 +126,72 @@ class UsuarioController extends BaseController{
         }
     }
 
-    
+    public function iniciarSesion(){
+        $validation = \Config\Services::validation();
+        $request = \Config\Services::request();
+        $session = session();
+
+        $validation->setRules(
+            [   'usuario'    => 'required',
+                'contraseña' => 'required'
+        ],
+            [ //Errores
+                'usuario'    => ['required' => 'Debe ingresar el usuario'],
+                'contraseña' => ['required' => 'Debe ingresar la contraseña'],
+            ]
+        );
+
+        if(!$validation->withRequest($request)->run()){
+
+            $data['titulo'] = 'Registro';
+            $data['validation'] = $validation->getErrors();
+            return view('front/header', $data)
+                   .view('front/registro')
+                   .view('front/footer'); 
+
+        }
+
+        $user = $request->getPost('usuario');
+        $contraseña = $request->getPost('contraseña');
+
+        $usuario_model = new usuario_model();
+        $usuario = $usuario_model->where('usuario_usuario', $user)->where('usuario_estado', 1)->first();
+
+        if($user && password_verify($contraseña, $user['usuario_contraseña'])){
+
+            $data = [
+                'id' => $user['id_usuario'],
+                'nombre' => $user['nombre_usuario'],
+                'apellido' => $user['apellido_usuario'],
+                'perfil' => $user['perfil_id'],
+                'login' => true
+            ];
+
+            $session->set($data);
+
+            switch ($user['perfil_id']){
+                case '1': 
+                    return redirect()->route('user_admin');
+                    break;
+                case '2': 
+                    return redirect()->route('/');
+                    break;
+            }
+        }else{
+            return redirect()->route('login')->with('mensaje', 'Usuario y/o contraseña incorrecto');
+        }
+    }
+
+    public function cerrarSesion(){
+        $session = session();
+        $session = destroy();
+        return redirect()->route('front/principal');
+    }
+
+    public function admin(){
+        $data['titulo'] = 'Index';
+        
+        return view('front/header_admin');
+    }
 
 }

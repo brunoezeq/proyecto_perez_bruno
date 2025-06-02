@@ -3,17 +3,17 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class producto_model extends Model
+class categoria_model extends Model
 {
-    protected $table      = 'producto';
-    protected $primaryKey = 'id_producto';
+    protected $table      = 'categoria';
+    protected $primaryKey = 'id_categoria';
 
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nombre_producto', 'descripcion_producto', 'categoria_producto', 'precio_producto', 'stock_producto', 'estado_producto'];
+    protected $allowedFields = ['descripcion_categoria'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

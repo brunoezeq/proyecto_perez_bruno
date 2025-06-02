@@ -21,7 +21,6 @@
           echo session('mensaje_consulta');
         } ?>
         
-        <form class="formulario">
           <div class="mb-3">
             <label for="nombre" class="form-label text-white">Nombre</label>
             <?php echo form_input (['name' => "nombre", 'id' => 'nombre', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Nombre", 'value'=> set_value('nombre_consulta')]); ?>
@@ -39,7 +38,6 @@
             <?php echo form_textarea (['name' => "consulta", 'id' => 'consulta', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Asunto", 'value'=> set_value('consulta')]); ?>
           </div>
           <?php echo form_submit('Consulta', 'Enviar', "class= 'btn btn-outline-light w-100'"); ?>
-        </form>
       </div>
 
         <?php echo form_close(); ?>
@@ -98,6 +96,8 @@
     </div>
 
   </div>
-</div>
+</div> 
+
+ 
 
 

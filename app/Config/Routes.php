@@ -31,20 +31,25 @@ $routes->get('principal', 'Home::index');
 $routes->get('contacto', 'Home::contacto');                             
 $routes->get('comercializacion', 'Home::comercializacion');             
 $routes->get('terminos_y_usos', 'Home::terminos');                      
-$routes->get('quienes_somos', 'Home::somos');                           
- 
-//$routes->get('registro', 'Home::registro');  
-//$routes->get('login', 'Home::login');  
+$routes->get('quienes_somos', 'Home::somos');                            
 
 /* ----- USUARIO ----- */
-$routes->get('registro', 'UsuarioController::registro');  
-$routes->get('login', 'UsuarioController::login'); 
-$routes->post('registro', 'UsuarioController::registrarUsuario');
-$routes->post('consulta', 'UsuarioController::registrarConsulta');
+$routes->get('registro', 'UsuarioController::registro');  //muestra vista de registro
+$routes->get('login', 'UsuarioController::login');        // muestra vista para iniciar sesión
+$routes->post('registro', 'UsuarioController::registrarUsuario'); //registrar usuario
+$routes->post('consulta', 'UsuarioController::registrarConsulta'); //registrar consulta
+$routes->get('logout', 'UsuarioController::cerrarSesion'); // cierra sesion NO FUNCIONA
+$routes->get('user_admin', 'UsuarioController::admin');  // cambia vista a admin NO FUNCIONA
 
 /* ----- PRODUCTO ----- */
-$routes->get('catalogo', 'Home::catalogo'); 
-
+$routes->get('catalogo', 'Home::catalogo'); //muestra vista catálogo
+$routes->get('cargarProducto', 'ProductoController::formularioCargarProducto'); //registra producto
+$routes->post('cargarProducto', 'ProductoController::cargarProducto'); // muestra vista cargar producto
+$routes->get('listarProducto', 'ProductoController::gestionarProducto'); //muestra vista gestionar producto
+$routes->get('editar/(:num)', 'ProductoController::editarProducto/$1');
+$routes->post('actualizar', 'ProductoController::actualizarProducto');
+$routes->get('eliminar/(:num)', 'ProductoController::eliminarProducto/$1');
+$routes->get('activar/(:num)', 'ProductoController::activarProducto/$1');
 
 
 

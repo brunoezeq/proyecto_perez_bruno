@@ -1,7 +1,7 @@
 <!DOCTYPE html>  
 <html>  
 <head>  
-<title><?php echo $titulo ?> </title>                                     
+<title></title>                                     
 <meta name="viewport" content="width=device-width, initialscale=1,  
 shrink-to-fit=no"> 
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"> <!-- enlace boostrap-->
@@ -11,11 +11,9 @@ shrink-to-fit=no">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>  <!-- enlace iconos boostrap-->
 </head>  
 
-<body>  
-
-<!-- Menú -->
-<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary p-0 m-0">
-    <div class="container-fluid">
+<!-- Menú Administador -->
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary p-0 m-0 nav_admin">
+    <div class="container-fluid na">
       <a class="navbar-brand" href= "<?php echo base_url("principal");?>"><img src="assets/img/logo.png" alt="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,32 +21,24 @@ shrink-to-fit=no">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
           <li class="nav-item">
-            <a class="nav-link " href= "<?php echo base_url("quienes_somos");?>">Nosotros</a>
+            <a class="nav-link " href= "<?php echo base_url("cargarProducto");?>">Cargar Producto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href= "<?php echo base_url("contacto");?>">Contacto</a>
+            <a class="nav-link " href= "<?php echo base_url("editarProducto");?>">Gestionar Producto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href= "<?php echo base_url("comercializacion");?>">Comercialización</a>
+            <a class="nav-link " href= "<?php echo base_url("listarProducto");?>">Ver Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href= "<?php echo base_url("terminos_y_usos");?>">Términos y Usos</a>
+            <a class="nav-link" href= "<?php echo base_url("#");?>">Ver Consultas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href= "<?php echo base_url("catalogo");?>">Catálogo</a>
+            <a class="nav-link" href= "<?php echo base_url("#");?>">Ver Ventas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href= "<?php echo base_url("registro");?>">Registrarse</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href= "<?php echo base_url("login");?>">Iniciar Sesión</a>
+            <a class="nav-link" href= "<?php echo base_url("logout");?>">Salir</a>
           </li>
         </ul>
       </div>
     </div>
-
   </nav>
-
-
-
-  
