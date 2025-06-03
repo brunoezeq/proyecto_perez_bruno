@@ -38,14 +38,15 @@ $routes->get('registro', 'UsuarioController::registro');  //muestra vista de reg
 $routes->get('login', 'UsuarioController::login');        // muestra vista para iniciar sesión
 $routes->post('registro', 'UsuarioController::registrarUsuario'); //registrar usuario
 $routes->post('consulta', 'UsuarioController::registrarConsulta'); //registrar consulta
-$routes->get('logout', 'UsuarioController::cerrarSesion'); // cierra sesion NO FUNCIONA
-$routes->get('user_admin', 'UsuarioController::admin');  // cambia vista a admin NO FUNCIONA
+$routes->post('verificarUsuario', 'UsuarioController::iniciarSesion'); 
+$routes->get('logout', 'UsuarioController::cerrarSesion'); 
+$routes->get('user_admin', 'UsuarioController::admin'); 
 
 /* ----- PRODUCTO ----- */
 $routes->get('catalogo', 'Home::catalogo'); //muestra vista catálogo
 $routes->get('cargarProducto', 'ProductoController::formularioCargarProducto'); //registra producto
 $routes->post('cargarProducto', 'ProductoController::cargarProducto'); // muestra vista cargar producto
-$routes->get('listarProducto', 'ProductoController::gestionarProducto'); //muestra vista gestionar producto
+$routes->get('gestionarProducto', 'ProductoController::gestionarProducto'); //muestra vista gestionar producto
 $routes->get('editarProducto/(:num)', 'ProductoController::editarProducto/$1');
 $routes->post('actualizar', 'ProductoController::actualizarProducto');
 $routes->get('eliminar/(:num)', 'ProductoController::eliminarProducto/$1');

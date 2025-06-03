@@ -126,7 +126,7 @@ class UsuarioController extends BaseController{
         }
     }
 
-    public function iniciarSesion(){
+   /*  public function iniciarSesion(){
         $validation = \Config\Services::validation();
         $request = \Config\Services::request();
         $session = session();
@@ -143,10 +143,10 @@ class UsuarioController extends BaseController{
 
         if(!$validation->withRequest($request)->run()){
 
-            $data['titulo'] = 'Registro';
+            $data['titulo'] = 'Iniciar Sesión';
             $data['validation'] = $validation->getErrors();
             return view('front/header', $data)
-                   .view('front/registro')
+                   .view('front/login')
                    .view('front/footer'); 
 
         }
@@ -155,9 +155,9 @@ class UsuarioController extends BaseController{
         $contraseña = $request->getPost('contraseña');
 
         $usuario_model = new usuario_model();
-        $usuario = $usuario_model->where('usuario_usuario', $user)->where('usuario_estado', 1)->first();
+        $usuario = $usuario_model->where('usuario', $user)->where('estado_usuario', 1)->first();
 
-        if($user && password_verify($contraseña, $user['usuario_contraseña'])){
+        if($user && password_verify($contraseña, $user['contraseña_usuario'])){
 
             $data = [
                 'id' => $user['id_usuario'],
@@ -180,13 +180,88 @@ class UsuarioController extends BaseController{
         }else{
             return redirect()->route('login')->with('mensaje', 'Usuario y/o contraseña incorrecto');
         }
+    } */
+
+    public function iniciarSesion()
+    {
+        helper(['form']);
+        
+        // Validar entrada
+       $validation = \Config\Services::validation();
+       $request = \Config\Services::request();
+
+       $validation->setRules(
+            [   'usuario'    => 'required',
+                'contraseña' => 'required'
+        ],
+            [ //Errores
+                'usuario'    => ['required' => 'Debe ingresar el usuario'],
+                'contraseña' => ['required' => 'Debe ingresar la contraseña'],
+            ]
+        );
+
+       if(!$validation->withRequest($request)->run()){
+
+            $data['titulo'] = 'Iniciar Sesión';
+            $data['validation'] = $validation->getErrors();
+            return view('front/header', $data)
+                   .view('front/login')
+                   .view('front/footer'); 
+
+        }
+
+        $usuario = $this->request->getPost('usuario');
+        $contrasenia = $this->request->getPost('contraseña');
+
+        $usuarioModel = new \App\Models\Usuario_model();
+        $usuarioData = $usuarioModel->where('usuario', $usuario)->first();
+
+        // Verificar que exista el usuario y sea un array
+        if (is_array($usuarioData) && isset($usuarioData['contraseña_usuario'])) {
+            // Verificar la contraseña
+            if (password_verify($contrasenia, $usuarioData['contraseña_usuario'])) {
+                // Verificar si el usuario está activo
+                if ($usuarioData['estado_usuario'] == 1) {
+                    // Iniciar sesión
+                    $datosSesion = [
+                        'id_usuario' => $usuarioData['id_usuario'],
+                        'usuario_usuario' => $usuarioData['usuario'],
+                        'rol_usuario' => $usuarioData['perfil_id'],
+                        'estado_usuario' => $usuarioData['estado_usuario'],
+                        'logueado' => true
+                    ];
+
+                    session()->set($datosSesion);
+
+                    // Redirigir según el rol
+                    if ($usuarioData['perfil_id'] == '1') {
+                        return redirect()->to('user_admin');
+                    } else {
+                        return redirect()->to('/');
+                    }
+                } else {
+                    session()->setFlashdata('mensaje', 'El usuario está inactivo');
+                }
+                 } else {
+                    session()->setFlashdata('mensaje', 'Usuario o contraseña incorrectos');
+            }
+                } else {
+                    session()->setFlashdata('mensaje', 'Usuario o contraseña incorrectos');
+        }
+
+         $data['titulo'] = 'Iniciar Sesión';
+         return view('front/header', $data)
+         . view('front/login')
+         . view('front/footer');
     }
 
+
     public function cerrarSesion(){
-        $session = session();
-        $session = destroy();
-        return redirect()->route('front/principal');
+        $session = session();     // Obtiene la sesión actual
+        $session->destroy();      // Destruye todos los datos de la sesión
+        return redirect()->to('/'); // Redirige al inicio (podés cambiar la URL si querés)
     }
+
 
     public function admin(){
         $data['titulo'] = 'Index';
