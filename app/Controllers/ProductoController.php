@@ -77,8 +77,8 @@ class ProductoController extends BaseController{
         $data['Producto'] = $producto_model->join('producto_categoria', 'producto_categoria.categoria_id = producto.producto_categoria')->findAll();
         $data['titulo'] = 'listar productos';
 
-        return view('backend/header_admin', $data)
-               .view('front/listarProducto');
+        return view('front/header_admin', $data)
+               .view('backend/listarProducto');
     }
 
     public function editarLibro(){
@@ -89,8 +89,8 @@ class ProductoController extends BaseController{
         $data['producto'] = $producto_model->where('producto_id', $id)->first();
         $data['titulo'] = 'Edición producto'; 
 
-        return view('backend/header_admin')
-              .view('front/editarProductos');
+        return view('front/header_admin')
+              .view('backend/editarProducto');
     }
 
     public function actualizarProducto(){
@@ -138,13 +138,7 @@ class ProductoController extends BaseController{
             return redirect()->get('gestionarProducto')->with('mensaje', '¡Producto actualizado con éxito!'); 
 
         }else{ // ------ REVISAR ------
-            $categoria = new categoria_model();
-            $data['validation'] = $validation->getErrors();
-            $data['categoria'] = $categoria->findAll();
-            $data['titulo'] = 'Agregar Producto';
-
-            return view('front/header', $data)
-                   .view('backend/actualizarProducto');
+            
         }
     }
 

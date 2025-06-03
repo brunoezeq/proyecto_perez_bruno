@@ -46,7 +46,7 @@ $routes->get('catalogo', 'Home::catalogo'); //muestra vista catálogo
 $routes->get('cargarProducto', 'ProductoController::formularioCargarProducto'); //registra producto
 $routes->post('cargarProducto', 'ProductoController::cargarProducto'); // muestra vista cargar producto
 $routes->get('listarProducto', 'ProductoController::gestionarProducto'); //muestra vista gestionar producto
-$routes->get('editar/(:num)', 'ProductoController::editarProducto/$1');
+$routes->get('editarProducto/(:num)', 'ProductoController::editarProducto/$1');
 $routes->post('actualizar', 'ProductoController::actualizarProducto');
 $routes->get('eliminar/(:num)', 'ProductoController::eliminarProducto/$1');
 $routes->get('activar/(:num)', 'ProductoController::activarProducto/$1');
