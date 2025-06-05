@@ -43,7 +43,7 @@ $routes->get('logout', 'UsuarioController::cerrarSesion');
 $routes->get('user_admin', 'UsuarioController::admin'); 
 
 /* ----- PRODUCTO ----- */
-$routes->get('catalogo', 'Home::catalogo'); //muestra vista catálogo
+$routes->get('catalogo', 'ProductoController::mostrarCatalogo'); //muestra vista catálogo
 $routes->get('cargarProducto', 'ProductoController::formularioCargarProducto'); //registra producto
 $routes->post('cargarProducto', 'ProductoController::cargarProducto'); // muestra vista cargar producto
 $routes->get('gestionarProducto', 'ProductoController::gestionarProducto'); //muestra vista gestionar producto

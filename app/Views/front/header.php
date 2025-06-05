@@ -28,18 +28,31 @@ shrink-to-fit=no">
           <li class="nav-item">
             <a class="nav-link " href= "<?php echo base_url("contacto");?>">Contacto</a>
           </li>
-          <li class="nav-item">
+<!--           <li class="nav-item">
             <a class="nav-link " href= "<?php echo base_url("comercializacion");?>">Comercialización</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href= "<?php echo base_url("terminos_y_usos");?>">Términos y Usos</a>
-          </li>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Servicios
+            </a>
+            <ul class="dropdown-menu">
+            <li class="nav-item">
+              <a class="nav-link " href= "<?php echo base_url("comercializacion");?>">Comercialización</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href= "<?php echo base_url("terminos_y_usos");?>">Términos y Usos</a>
+            </li>
+            </ul>
+          </li> 
           <li class="nav-item">
             <a class="nav-link" href= "<?php echo base_url("catalogo");?>">Catálogo</a>
           </li>
           <?php if(session('logueado')) { ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> <i class="bi bi-person"></i><?php echo session("usuario_usuario"); ?></a>
+                    <a class="nav-link" href="#"> <i class="bi bi-person"></i> <?php echo session("usuario_usuario"); ?></a>
                 </li>
                 <li class="nav-item">
                       <a class="nav-link" href= "<?php echo base_url("carrito");?>"><i class="bi bi-cart"></i> </a>
@@ -60,6 +73,3 @@ shrink-to-fit=no">
     </div>
   </nav>
 
-
-
-  

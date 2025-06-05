@@ -23,6 +23,7 @@ class ProductoController extends BaseController{
             ['nombre'   => 'required|min_length[3]|max_length[50]',
              'descripcion' => 'required|min_length[10]|max_length[100]',
              'categoria'   =>  'required|is_not_unique[categoria.id_categoria]',
+             'imagen' => 'uploaded[imagen]|max_size[imagen,4060]|is_image[imagen]',
              'precio' => 'required|min_length[3]|max_length[10]',
              'stock' => 'required|min_length[1]|max_length[10]'
 
@@ -35,6 +36,8 @@ class ProductoController extends BaseController{
                                     'min_length' => 'El nombre debe superar los 5 caracteres',
                                     'max_length' => 'La consulta no debe superar los 50 caracteres'],
                 'categoria'    => [ 'required'   => 'La categoría es obligatoria'],
+                'imagen'       => [ 'uploaded' => 'Debe seleccionar una imagen',
+                                    'is_image' => 'Debe ser una imagen valida'], 
                 'precio'       => [ 'required'   => 'El precio es obligatorio',
                                     'min_length' => 'El precio debe superar los 10 caracteres',
                                     'max_length' => 'El precio no debe superar los 100 caracteres'],
@@ -45,10 +48,14 @@ class ProductoController extends BaseController{
         );
 
         if($validation->withRequest($request)->run()){
+            $img = $this->request->getFile('imagen');
+            $nombre_aleatorio = $img->getRandomName();
+            $img->move(ROOTPATH.'public/assest/img', $nombre_aleatorio); 
             $data = [
                 'nombre_producto' => $request->getPost('nombre'),
                 'descripcion_producto' => $request->getPost('descripcion'),
                 'categoria_producto' => $request->getPost('categoria'),
+                'imagen_producto' => $nombre_aleatorio,
                 'precio_producto' => $request->getPost('precio'),
                 'stock_producto' => $request->getPost('stock'),
                 'estado_producto' => 1
@@ -181,5 +188,16 @@ class ProductoController extends BaseController{
         $producto = new producto_model();
         $producto->update($id, $data);
         return redirect()->route('gestionarProdcuto'); 
+    }
+
+
+    public function mostrarCatalogo(){
+        $producto = new producto_model();
+        $data['producto'] = $producto->where('estado_producto', 1)->where('stock_producto>', 0)->join('categoria', 'categoria.id_categoria = producto.categoria_producto')->findAll();
+
+        $data['titulo'] = 'Catálogo';
+        return  view('front/header', $data)
+                . view('front/catalogo')
+                . view('front/footer');
     }
 }

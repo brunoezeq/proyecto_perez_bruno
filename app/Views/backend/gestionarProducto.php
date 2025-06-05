@@ -7,6 +7,7 @@
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Categoría</th>
+                <th>Imagen</th>
                 <th>Precio</th>
                 <th>Stock</th>
                 <th>Editar</th>
@@ -20,6 +21,7 @@
                         <td><?= esc($row['nombre_producto'] ?? '') ?></td>
                         <td><?= esc($row['descripcion_producto'] ?? '') ?></td>
                         <td><?= esc($row['descripcion_categoria'] ?? '') ?></td>
+                        <td><img src="<?php echo base_url('public/assest/img/'.$row['imagen_producto']);?>" height="100" width="100"></td>
                         <td><?= esc($row['precio_producto'] ?? '') ?></td>
                         <td><?= esc($row['stock_producto'] ?? '') ?></td>
                         <td>

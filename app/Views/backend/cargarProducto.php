@@ -18,7 +18,7 @@
             </div>
         <?php } ?>   
 
-        <?php echo form_open('cargarProducto') ?>
+        <?php echo form_open_multipart('cargarProducto') ?>
         <div class="form-group">
             <label for="nombre">Nombre del Producto</lebel>
             <?php echo form_input(['name' => 'nombre', 'id' => 'nombre', 'class' => 'form-control', 'placeholder' => 'Ingrese el nombre del producto', 'value' => set_value('nombre')]); ?>
@@ -26,6 +26,10 @@
         <div>
             <label for="descripcion">Descripción del Producto</lebel>
             <?php echo form_input(['name' => 'descripcion', 'id' => 'descripcion', 'class' => 'form-control', 'placeholder' => 'Ingrese la descripción del Producto', 'value' => set_value('descripcion')]); ?>
+        </div>
+           <div>
+            <label for="imagen">Imagen del Producto</lebel>
+            <?php echo form_input(['name' => 'imagen', 'id' => 'imagen', 'class' => 'form-control', 'type' => 'file', 'value' => set_value('imagen')]); ?>
         </div>
         <div class="form-group">
             <label for="categoria">Categoría</lebel>
