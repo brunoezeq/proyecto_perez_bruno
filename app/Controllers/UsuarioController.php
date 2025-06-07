@@ -257,11 +257,10 @@ class UsuarioController extends BaseController{
 
 
     public function cerrarSesion(){
-        $session = session();     // Obtiene la sesión actual
-        $session->destroy();      // Destruye todos los datos de la sesión
-        return redirect()->to('/'); // Redirige al inicio (podés cambiar la URL si querés)
+        $session = session();     
+        $session->destroy();      
+        return redirect()->to('/'); 
     }
-
 
     public function admin(){
         $data['titulo'] = 'Index';

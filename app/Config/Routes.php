@@ -49,12 +49,14 @@ $routes->post('cargarProducto', 'ProductoController::cargarProducto'); // muestr
 $routes->get('gestionarProducto', 'ProductoController::gestionarProducto'); //muestra vista gestionar producto
 $routes->get('editarProducto/(:num)', 'ProductoController::editarProducto/$1');
 $routes->post('actualizar', 'ProductoController::actualizarProducto');
-$routes->get('eliminar/(:num)', 'ProductoController::eliminarProducto/$1');
-$routes->get('activar/(:num)', 'ProductoController::activarProducto/$1');
+$routes->get('eliminarProducto/(:num)', 'ProductoController::eliminarProducto/$1');
+$routes->get('activarProducto/(:num)', 'ProductoController::activarProducto/$1');
 
-
-
-
+/* ----- CARRITO ----- */
+$routes->get('verCarrito', 'CarritoController::verCarrito');
+$routes->post('agregarAlCarrito', 'CarritoController::agregarAlCarrito'); 
+$routes->get('eliminarItem/(:any)', 'CarritoController::eliminarItem/$1');
+$routes->get('vaciarCarrito', 'CarritoController::vaciarCarrito');
 
 
 

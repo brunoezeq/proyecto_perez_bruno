@@ -55,7 +55,7 @@ shrink-to-fit=no">
                     <a class="nav-link" href="#"> <i class="bi bi-person"></i> <?php echo session("usuario_usuario"); ?></a>
                 </li>
                 <li class="nav-item">
-                      <a class="nav-link" href= "<?php echo base_url("carrito");?>"><i class="bi bi-cart"></i> </a>
+                      <a class="nav-link" href= "<?php echo base_url("verCarrito");?>"><i class="bi bi-cart"></i> </a>
                 </li>
                 <li class="nav-item">
                       <a class="nav-link" href= "<?php echo base_url("logout");?>"> <i class="bi bi-box-arrow-right"></i> </a>

@@ -25,45 +25,35 @@
 
     <!-- Catálogo -->
     <div class="col-md-9 catalogo">
-
       <h2>Conoce nuestros productos</h2>
-      <?php foreach ($producto as $row) {?>
-      
-<!--    <div class="row row-cols-1 row-cols-md-2 g-4">
-
-        <div class="col productos-catalogo">
-          <div class="card h-100 text-center">
-              <img class="card-img-top" src="<?php echo base_url('public/assest/img/'.$row['imagen_producto']);?>" height="450" width="150" alt= "imagen_producto">
-              <h5 class="card-title"> <?php echo $row['nombre_producto']?>  </h5>
-              <p class="card-text"> <?php echo $row['descripcion_producto']?> </p>
-              <p class="card-text"> <?php echo "$"; echo $row['precio_producto']?> </p>
-              <p class="card-text"> <?php echo "Categoria:"; echo $row['categoria_producto']?> </p>
-              <p class="card-text"> <?php echo "Stock:"; echo $row['stock_producto']?> </p>
-              <button class="btn btn-verde">Agregar al carrito</button>
-            </div>
-          </div>
-        </div>
-        <?php } ?>
-      </div> -->
-
       <div class="container mt-4">
         <div class="row">
-            <?php foreach($producto as $producto): ?>
-                <div class="col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img src="<?= base_url('public/assest/img/'.$producto['imagen_producto']) ?>" class="card-img-top" alt="<?= esc($producto['nombre_producto']) ?>">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= esc($producto['nombre_producto']) ?></h5>
-                            <p class="card-text"><?= esc($producto['descripcion_producto']) ?></p>
-                            <p class="card-text"><strong>Precio:</strong> $<?= esc($producto['precio_producto']) ?></p>
-                            <a href="#" class="btn btn-verde">Agregar al carrito</a>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
-     </div>
+          <?php foreach($producto as $producto): ?>
+            <div class="col-md-6 mb-4">
+              <div class="card h-100">
+                <img src="<?= base_url('public/assest/img/'.$producto['imagen_producto']) ?>" class="card-img-top" alt="<?= esc($producto['nombre_producto']) ?>">
+                <hr>
+                <div class="card-body text-center">
+                  <h5 class="card-title"><?= esc($producto['nombre_producto']) ?></h5>
+                  <p class="card-text"><?= esc($producto['descripcion_producto']) ?></p>
+                  <p class="card-text"><strong>Precio:</strong> $<?= esc($producto['precio_producto']) ?></p>
 
+                  <?php if(session('logueado')): ?>
+                    <?= form_open('agregarAlCarrito') ?>
+                      <?= form_hidden('id', $producto['id_producto']) ?>
+                      <?= form_hidden('nombre', $producto['nombre_producto']) ?>
+                      <?= form_hidden('precio', $producto['precio_producto']) ?>
+                      <?= form_submit('comprar', 'Agregar al carrito', "class='btn btn-verde mt-2'") ?>
+                    <?= form_close() ?>
+                  <?php endif; ?>
+                </div> <!-- card-body -->
+              </div> <!-- card -->
+            </div> <!-- col -->
+          <?php endforeach; ?>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+

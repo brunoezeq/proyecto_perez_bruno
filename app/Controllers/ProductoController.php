@@ -173,23 +173,24 @@ class ProductoController extends BaseController{
                             ->withInput()
                             ->with('errors', $validation->getErrors());
         }
-}
-
-
-    public function eliminarProducto(){
-        $data = array('producto_estado' => '0');
-        $producto = new producto_model();
-        $producto->update($id, $data);
-        return redirect()->route('gestionarProdcuto'); 
     }
 
-    public function activarProducto(){
-        $data = array('producto_estado' => '1');
+
+    public function eliminarProducto($id){
+        $data = ['estado_producto' => 0]; // Asegurate que el campo se llama así en tu DB
         $producto = new producto_model();
         $producto->update($id, $data);
-        return redirect()->route('gestionarProdcuto'); 
+        return redirect()->route('gestionarProducto')->with('mensaje', 'Producto eliminado con éxito');
+
     }
 
+    public function activarProducto($id){
+        $data = ['estado_producto' => 1];
+        $producto = new producto_model();
+        $producto->update($id, $data);
+        return redirect()->route('gestionarProducto')->with('mensaje', 'Producto activado con éxito');
+ 
+    }
 
     public function mostrarCatalogo(){
         $producto = new producto_model();

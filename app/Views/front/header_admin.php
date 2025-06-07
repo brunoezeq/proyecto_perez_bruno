@@ -27,9 +27,6 @@ shrink-to-fit=no">
             <a class="nav-link " href= "<?php echo base_url("gestionarProducto");?>">Gestionar Producto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href= "<?php echo base_url("listarProducto");?>">Ver Productos</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href= "<?php echo base_url("#");?>">Ver Consultas</a>
           </li>
           <li class="nav-item">
