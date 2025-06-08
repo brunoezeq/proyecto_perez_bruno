@@ -9,10 +9,11 @@ class ProductoController extends BaseController{
     public function formularioCargarProducto(){
         $categoria = new categoria_model(); 
         $data['categoria'] = $categoria->findAll();
-        $data['titulo'] = 'Agregar Producto';
+        $data['titulo'] = 'Cargar Producto';
         
         return view('front/header_admin', $data)
-               .view('backend/cargarProducto', $data); 
+               .view('backend/cargarProducto', $data)
+               . view('front/footer_admin'); 
     }
     
     public function cargarProducto(){
@@ -70,10 +71,11 @@ class ProductoController extends BaseController{
             $categoria = new categoria_model();
             $data['validation'] = $validation->getErrors();
             $data['categoria'] = $categoria->findAll();
-            $data['titulo'] = 'Agregar Producto';
+            $data['titulo'] = 'Cargar Producto';
 
             return view('front/header', $data)
-                   .view('backend/cargarProducto'); 
+                   .view('backend/cargarProducto', $data)
+                   . view('front/footer_admin');
         }
 
     }
@@ -85,10 +87,11 @@ class ProductoController extends BaseController{
         $data['producto'] = $producto->select('producto.*, categoria.descripcion_categoria')
         ->join('categoria', 'categoria.id_categoria = producto.categoria_producto')
         ->findAll();
-        $data['titulo'] = 'listar productos';
+        $data['titulo'] = 'Gestionar Producto';
 
         return view('front/header_admin', $data)
-               .view('backend/gestionarProducto', $data);
+               .view('backend/gestionarProducto', $data)
+               . view('front/footer_admin');
     }
 
     public function editarProducto($id = null){
@@ -102,14 +105,15 @@ class ProductoController extends BaseController{
 
         $data['categoria'] = $categoria->findAll();
         $data['producto'] = $producto->where('id_producto', $id)->first();
-        $data['titulo'] = 'Edición producto'; 
+        $data['titulo'] = 'Editar Producto'; 
 
         if (!$data['producto']) {
         throw new \CodeIgniter\Exceptions\PageNotFoundException('Producto no encontrado');
         }
 
         return view('front/header_admin', $data)
-              .view('backend/editarProducto', $data);
+              .view('backend/editarProducto', $data)
+              . view('front/footer_admin');
     }
 
     public function actualizarProducto(){

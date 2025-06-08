@@ -57,7 +57,7 @@ class UsuarioController extends BaseController{
                 'usuario' => $request->getPost('usuario'),
                 'contraseña_usuario' => password_hash($request->getPost('contraseña'), PASSWORD_BCRYPT),
                 'perfil_id' => 2,
-                'usuario_estado' => 1
+                'estado_usuario' => 1
             ];
 
             $usuario = new usuario_model();
@@ -125,62 +125,6 @@ class UsuarioController extends BaseController{
                    .view('front/footer'); 
         }
     }
-
-   /*  public function iniciarSesion(){
-        $validation = \Config\Services::validation();
-        $request = \Config\Services::request();
-        $session = session();
-
-        $validation->setRules(
-            [   'usuario'    => 'required',
-                'contraseña' => 'required'
-        ],
-            [ //Errores
-                'usuario'    => ['required' => 'Debe ingresar el usuario'],
-                'contraseña' => ['required' => 'Debe ingresar la contraseña'],
-            ]
-        );
-
-        if(!$validation->withRequest($request)->run()){
-
-            $data['titulo'] = 'Iniciar Sesión';
-            $data['validation'] = $validation->getErrors();
-            return view('front/header', $data)
-                   .view('front/login')
-                   .view('front/footer'); 
-
-        }
-
-        $user = $request->getPost('usuario');
-        $contraseña = $request->getPost('contraseña');
-
-        $usuario_model = new usuario_model();
-        $usuario = $usuario_model->where('usuario', $user)->where('estado_usuario', 1)->first();
-
-        if($user && password_verify($contraseña, $user['contraseña_usuario'])){
-
-            $data = [
-                'id' => $user['id_usuario'],
-                'nombre' => $user['nombre_usuario'],
-                'apellido' => $user['apellido_usuario'],
-                'perfil' => $user['perfil_id'],
-                'login' => true
-            ];
-
-            $session->set($data);
-
-            switch ($user['perfil_id']){
-                case '1': 
-                    return redirect()->route('user_admin');
-                    break;
-                case '2': 
-                    return redirect()->route('/');
-                    break;
-            }
-        }else{
-            return redirect()->route('login')->with('mensaje', 'Usuario y/o contraseña incorrecto');
-        }
-    } */
 
     public function iniciarSesion()
     {
@@ -265,7 +209,9 @@ class UsuarioController extends BaseController{
     public function admin(){
         $data['titulo'] = 'Index';
         
-        return view('front/header_admin');
+        return view('front/header_admin')
+               .view('backend/panel_admin')
+               .view('front/footer_admin');
     }
 
 }

@@ -1,4 +1,4 @@
-<h1 class="text-center my-4">Cargar Producto</h1>
+<h1 class="text-center my-4" style="color: #143d33;">Cargar Producto</h1>
 
 <div class="container">
     <div class="row justify-content-center">

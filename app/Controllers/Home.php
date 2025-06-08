@@ -44,31 +44,5 @@ class Home extends BaseController
          . view('front/footer'); 
     }
 
-    
-/*     
-    public function catalogo(): string
-        {
-            $data["titulo"] = "Catálogo";
-            return view('front/header', $data)
-            . view('front/catalogo')
-            . view('front/footer');
-        }
-
-    public function registro(): string
-    {
-        $data["titulo"] = "Registro";
-        return view('front/header', $data)
-         . view('front/registro')
-         . view('front/footer');
-    }
-
-    public function login(): string
-    {
-        $data["titulo"] = "Login";
-        return view('front/header', $data)
-         . view('front/login')
-         . view('front/footer');
-    } */
-
 }
 

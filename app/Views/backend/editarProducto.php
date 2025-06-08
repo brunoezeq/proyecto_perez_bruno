@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
+        <div class="col-md-8 col-lg-6"> 
             <div class="card shadow-sm">
                 <div class="card-body">
 

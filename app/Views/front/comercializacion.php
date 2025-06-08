@@ -16,11 +16,12 @@
           <div class="row">
             <div class="col-md-6 mb-4">
               <div class="bg-light p-4 rounded h-100">
-                <h4 class="fw-bold">Tipos de entrega</h4>
-                <ul class="mb-0">
-                  <li>Retiro en local sin costo adicional</li>
-                  <li>Entrega a domicilio en zonas cercanas</li>
-                  <li>Envíos programados para pedidos recurrentes</li>
+                <h4 class="fw-bold">Formas de pago</h4>
+                 <ul class="mb-0">
+                  <li>Transferencia bancaria</li>
+                  <li>Mercado Pago</li>
+                  <li>Tarjetas de débito y crédito</li>
+                  <li>Pago en efectivo en el local</li>
                 </ul>
               </div>
             </div>
@@ -38,12 +39,11 @@
 
             <div class="col-md-6 mb-4">
               <div class="bg-light p-4 rounded h-100">
-                <h4 class="fw-bold">Formas de pago</h4>
+                <h4 class="fw-bold">Tipos de entrega</h4>
                 <ul class="mb-0">
-                  <li>Transferencia bancaria</li>
-                  <li>Mercado Pago</li>
-                  <li>Tarjetas de débito y crédito</li>
-                  <li>Pago en efectivo en el local</li>
+                  <li>Retiro en local sin costo adicional</li>
+                  <li>Entrega a domicilio en zonas cercanas</li>
+                  <li>Envíos programados para pedidos recurrentes</li>
                 </ul>
               </div>
             </div>
