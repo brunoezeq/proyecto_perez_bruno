@@ -19,7 +19,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Café Colombia</h5>
           <p class="text-black">Suave, con notas dulces y un aroma floral, el café colombiano es reconocido por su equilibrio y calidad inigualable.</p>
-          <a href= "<?php echo base_url("proximamente");?>" class="btn btn-verde">Comprar</a>
+          <a href= "<?php echo base_url("catalogo");?>" class="btn btn-verde">Comprar</a>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Café Nicaragua</h5>
           <p class="text-black">Con cuerpo medio y un sabor achocolatado, el café de Nicaragua destaca por su dulzura natural y suavidad.</p>
-          <a href= "<?php echo base_url("proximamente");?>" class="btn btn-verde">Comprar</a>
+          <a href= "<?php echo base_url("catalogo");?>" class="btn btn-verde">Comprar</a>
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Café Costa Rica</h5>
           <p class="text-black">Vibrante y con acidez brillante, el café costarricense ofrece sabores cítricos y un perfil muy aromático.</p>
-          <a href= "<?php echo base_url("proximamente");?>" class="btn btn-verde">Comprar</a>
+          <a href= "<?php echo base_url("catalogo");?>" class="btn btn-verde">Comprar</a>
         </div>
       </div>
     </div>

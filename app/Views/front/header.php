@@ -50,7 +50,7 @@ shrink-to-fit=no">
                 </li>
                 <li class="nav-item">
                       <a class="nav-link" href= "<?php echo base_url("verCarrito");?>"><i class="bi bi-cart"></i> </a>
-                </li>
+                </li> 
                 <li class="nav-item">
                       <a class="nav-link" href= "<?php echo base_url("logout");?>"> <i class="bi bi-box-arrow-right"></i> </a>
                 </li>
@@ -66,3 +66,15 @@ shrink-to-fit=no">
       </div>
     </div>
 </nav>
+
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link" href="#"> <i class="bi bi-person"></i> <?php echo session("usuario_usuario");?>! </a>
+                  <ul class="dropdown-menu" style="background-color: #143d33;">
+                  <li class="nav-item">
+                            <a class="nav-link" href= "<?php echo base_url("verCarrito");?>"><i class="bi bi-cart"></i> </a>
+                      </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href= "<?php echo base_url("misCompras");?>">Mis compras</a>
+                  </li>
+                  </ul>
+                </li>  -->

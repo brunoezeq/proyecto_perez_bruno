@@ -34,10 +34,10 @@
             <a class="nav-link" href="<?= base_url('gestionarProducto') ?>">Gestionar Producto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('#') ?>">Ver Consultas</a>
+            <a class="nav-link" href="<?= base_url('verConsultas') ?>">Ver Consultas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('#') ?>">Ver Ventas</a>
+            <a class="nav-link" href="<?= base_url('verVentas') ?>">Ver Ventas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="bi bi-person"></i> <?= session('usuario_usuario') ?></a>

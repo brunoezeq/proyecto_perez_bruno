@@ -3,6 +3,8 @@
 namespace App\Controllers;
 use App\Models\producto_model; 
 use App\Models\categoria_model;
+use App\Models\venta_model;
+use App\Models\detalle_venta_model;
 
 class CarritoController extends BaseController{
 
@@ -18,6 +20,7 @@ class CarritoController extends BaseController{
 
 
     public function agregarAlCarrito(){
+
         $cart = \Config\Services::cart();
         $request = \Config\Services::request();
         
@@ -27,7 +30,7 @@ class CarritoController extends BaseController{
             'price' => $request->getPost('precio'),
             'qty'   => 1
         ];
-
+        
         $cart->insert($data);
 
         return redirect()->route('verCarrito')->with('mensaje', '¡Producto agregado al carrito!');

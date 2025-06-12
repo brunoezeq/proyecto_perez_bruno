@@ -214,4 +214,16 @@ class UsuarioController extends BaseController{
                .view('front/footer_admin');
     }
 
+    public function verConsultas(){
+
+        $consulta = new consulta_model();
+        $data['consulta'] = $consulta->select('consulta.*')->findAll();
+
+        $data['titulo'] = 'Consultas';
+        
+        return view('front/header_admin', $data)
+               .view('backend/verConsultas', $data)
+               .view('front/footer_admin');
+    }
+
 }

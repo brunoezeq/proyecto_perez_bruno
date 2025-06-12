@@ -16,10 +16,10 @@
 
       <h5>Ordenar por</h5>
       <select class="form-select">
-        <option value="featured">Destacados</option>
-        <option value="bestselling">Más vendidos</option>
-        <option value="priceLow">Menor precio</option>
-        <option value="priceHigh">Mayor precio</option>
+        <option value="featured">Todos</option>
+        <option value="bestselling">Cefé</option>
+        <option value="priceLow">Té</option>
+        <option value="priceHigh">Accesorios</option>
       </select>
     </div>
 
@@ -28,21 +28,21 @@
       <h2>Conoce nuestros productos</h2>
       <div class="container mt-4">
         <div class="row">
-          <?php foreach($producto as $producto): ?>
+          <?php foreach($producto as $producto1): ?>
             <div class="col-md-6 mb-4">
               <div class="card h-100">
-                <img src="<?= base_url('public/assest/img/'.$producto['imagen_producto']) ?>" class="card-img-top" alt="<?= esc($producto['nombre_producto']) ?>">
+                <img src="<?= base_url('public/assest/img/'.$producto1['imagen_producto']) ?>" class="card-img-top" alt="<?= esc($producto1['nombre_producto']) ?>">
                 <hr>
                 <div class="card-body text-center">
-                  <h5 class="card-title"><?= esc($producto['nombre_producto']) ?></h5>
-                  <p class="card-text"><?= esc($producto['descripcion_producto']) ?></p>
-                  <p class="card-text"><strong>Precio:</strong> $<?= esc($producto['precio_producto']) ?></p>
+                  <h5 class="card-title"><?= esc($producto1['nombre_producto']) ?></h5>
+                  <p class="card-text"><?= esc($producto1['descripcion_producto']) ?></p>
+                  <p class="card-text"><strong>Precio:</strong> $<?= esc($producto1['precio_producto']) ?></p>
 
                   <?php if(session('logueado')): ?>
                     <?= form_open('agregarAlCarrito') ?>
-                      <?= form_hidden('id', $producto['id_producto']) ?>
-                      <?= form_hidden('nombre', $producto['nombre_producto']) ?>
-                      <?= form_hidden('precio', $producto['precio_producto']) ?>
+                      <?= form_hidden('id', $producto1['id_producto']) ?>
+                      <?= form_hidden('nombre', $producto1['nombre_producto']) ?>
+                      <?= form_hidden('precio', $producto1['precio_producto']) ?>
                       <?= form_submit('comprar', 'Agregar al carrito', "class='btn btn-verde mt-2'") ?>
                     <?= form_close() ?>
                   <?php endif; ?>

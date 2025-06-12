@@ -199,6 +199,7 @@ class ProductoController extends BaseController{
     public function mostrarCatalogo(){
         $producto = new producto_model();
         $data['producto'] = $producto->where('estado_producto', 1)->where('stock_producto>', 0)->join('categoria', 'categoria.id_categoria = producto.categoria_producto')->findAll();
+      
 
         $data['titulo'] = 'Catálogo';
         return  view('front/header', $data)

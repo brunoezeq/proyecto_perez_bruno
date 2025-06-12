@@ -41,6 +41,7 @@ $routes->post('consulta', 'UsuarioController::registrarConsulta'); //registrar c
 $routes->post('verificarUsuario', 'UsuarioController::iniciarSesion'); 
 $routes->get('logout', 'UsuarioController::cerrarSesion'); 
 $routes->get('user_admin', 'UsuarioController::admin'); 
+$routes->get('verConsultas', 'UsuarioController::verConsultas');
 
 /* ----- PRODUCTO ----- */
 $routes->get('catalogo', 'ProductoController::mostrarCatalogo'); //muestra vista catálogo
@@ -58,7 +59,10 @@ $routes->post('agregarAlCarrito', 'CarritoController::agregarAlCarrito');
 $routes->get('eliminarItem/(:any)', 'CarritoController::eliminarItem/$1');
 $routes->get('vaciarCarrito', 'CarritoController::vaciarCarrito');
 
-
+/* ----- VENTAS ----- */
+$routes->get('ventas', 'VentaController::registrarVenta'); 
+$routes->get('verVentas', 'VentaController::verVentas');
+$routes->get('verDetalle/(:num)', 'VentaController::verDetalle/$1'); 
 
 
 /*

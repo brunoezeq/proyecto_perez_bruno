@@ -1,5 +1,5 @@
 <?php $cart = \Config\Services::cart(); ?>
-
+ 
 <div class="container my-5">
     <h1 class="text-center mb-4">Carrito de Compras</h1>
 
@@ -58,7 +58,7 @@
                 Vaciar carrito
             </a>
             <a href="<?= base_url('ventas') ?>" class="btn btn-primary">
-                Ordenar compra
+                Confirmar compra
             </a>
         </div>
     <?php endif; ?>
