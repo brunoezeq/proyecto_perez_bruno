@@ -4,7 +4,7 @@
     <div class="banner-text">
       <h1>Neighbourhood</h1>
       <p>descubrí el mejor café para vos</p>
-      <a href= "<?php echo base_url("proximamente");?>" class="btn btn-verde">Conocer más</a>
+      <a href= "<?php echo base_url("catalogo");?>" class="btn btn-verde">Conocer más</a>
     </div>
   </div>
 

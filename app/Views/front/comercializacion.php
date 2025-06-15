@@ -23,6 +23,7 @@
                   <li>Tarjetas de débito y crédito</li>
                   <li>Pago en efectivo en el local</li>
                 </ul>
+                <img src="assets/img/medios_de_pago.jpg" alt="mediosdepago" class="img-fluid pt-4" style="height: 120px;">
               </div>
             </div>
 
@@ -31,9 +32,10 @@
                 <h4 class="fw-bold">Formas de envío</h4>
                 <ul class="mb-0">
                   <li>Envíos por mensajería propia en Corrientes y Chaco</li>
-                  <li>Correo Argentino y OCA para el resto del país</li>
-                  <li>Envíos gratuitos a partir de compras mayores a $25.000</li>
+                  <li>Correo Argentino, Andreani y OCA para el resto del país</li>
+                  <li>Envíos gratuitos a partir de $25.000</li>
                 </ul>
+                <img src="assets/img/envio.png" alt="envios" class="img-fluid" style="height: 100px;">
               </div>
             </div>
 

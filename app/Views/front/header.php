@@ -45,36 +45,27 @@ shrink-to-fit=no">
             <a class="nav-link" href= "<?php echo base_url("catalogo");?>">Catálogo</a>
           </li>
           <?php if(session('logueado')) { ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"> <i class="bi bi-person"></i> <?php echo session("usuario_usuario"); ?></a>
-                </li>
-                <li class="nav-item">
-                      <a class="nav-link" href= "<?php echo base_url("verCarrito");?>"><i class="bi bi-cart"></i> </a>
-                </li> 
-                <li class="nav-item">
-                      <a class="nav-link" href= "<?php echo base_url("logout");?>"> <i class="bi bi-box-arrow-right"></i> </a>
-                </li>
-          <?php } else{ ?>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="usuarioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     <i class="bi bi-person"></i> ¡Hola, <?php echo session("usuario_usuario"); ?>!
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="usuarioDropdown" style="background-color: #143d33;">
+                    <li><a class="dropdown-item" href="<?php echo base_url("verCarrito"); ?>"><i class="bi bi-cart"></i> Carrito</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("verMisCompras"); ?>"><i class="bi bi-bag-check"></i> Mis Compras</a></li>
+                    <li><a class="dropdown-item" href="<?php echo base_url("editarPerfil"); ?>"><i class="bi bi-pencil-square"></i> Editar Perfil</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="<?php echo base_url("logout"); ?>"><i class="bi bi-box-arrow-right"></i> Salir</a></li>
+                </ul>
+            </li>
+          <?php } else { ?>
             <li class="nav-item">
-                      <a class="nav-link" href= "<?php echo base_url("registro");?>">Registrarse</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href= "<?php echo base_url("login");?>">Iniciar Sesión</a>
-                    </li>
+                <a class="nav-link" href= "<?php echo base_url("registro");?>">Registrarse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href= "<?php echo base_url("login");?>">Iniciar Sesión</a>
+            </li>
           <?php } ?>
         </ul>
       </div>
     </div>
 </nav>
-
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link" href="#"> <i class="bi bi-person"></i> <?php echo session("usuario_usuario");?>! </a>
-                  <ul class="dropdown-menu" style="background-color: #143d33;">
-                  <li class="nav-item">
-                            <a class="nav-link" href= "<?php echo base_url("verCarrito");?>"><i class="bi bi-cart"></i> </a>
-                      </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href= "<?php echo base_url("misCompras");?>">Mis compras</a>
-                  </li>
-                  </ul>
-                </li>  -->

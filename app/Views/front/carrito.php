@@ -1,7 +1,7 @@
 <?php $cart = \Config\Services::cart(); ?>
  
 <div class="container my-5">
-    <h1 class="text-center mb-4">Carrito de Compras</h1>
+    <h2 class="text-center mb-4">Carrito de Compras</h2>
 
     <div class="d-flex justify-content-between mb-3">
         <a href="<?= base_url('catalogo') ?>" class="btn btn-verde">Continuar comprando</a>

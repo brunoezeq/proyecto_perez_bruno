@@ -1,4 +1,4 @@
-<div class="container registro">
+<div class="container py-5">
 
   <div class="row form-registro">
     <div class="col-md-6">

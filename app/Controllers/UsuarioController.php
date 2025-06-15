@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Models\usuario_model; 
 use App\Models\consulta_model;
+use App\Models\venta_model;
+use App\Models\detalle_venta_model;
 
 class UsuarioController extends BaseController{
 
@@ -104,10 +106,13 @@ class UsuarioController extends BaseController{
 
         if($validation->withRequest($request)->run()){
             $data = [
+                'usuario_id' => session()->has('id_usuario') ? session('id_usuario') : null,
                 'nombre_consulta' => $request->getPost('nombre'),
                 'mail_consulta' => $request->getPost('mail'),
                 'asunto_consulta' => $request->getPost('asunto'),
-                'consulta' => $request->getPost('consulta')
+                'consulta' => $request->getPost('consulta'),
+                'leido' => 0,
+                'respondido' => 0
             ];
 
             $consulta = new consulta_model();
@@ -214,16 +219,164 @@ class UsuarioController extends BaseController{
                .view('front/footer_admin');
     }
 
-    public function verConsultas(){
+    public function verConsultas() {
+        $consulta = new Consulta_model();
 
-        $consulta = new consulta_model();
-        $data['consulta'] = $consulta->select('consulta.*')->findAll();
+        $desde = $this->request->getGet('desde');
+        $hasta = $this->request->getGet('hasta');
 
-        $data['titulo'] = 'Consultas';
-        
+        $builder = $consulta
+            ->select('consulta.*, usuario.nombre_usuario, usuario.apellido_usuario')
+            ->join('usuario', 'usuario.id_usuario = consulta.usuario_id', 'left')
+            ->orderBy('consulta.fecha_consulta', 'DESC');
+
+        if ($desde) {
+            $builder->where('consulta.fecha_consulta >=', $desde);
+        }
+        if ($hasta) {
+            $builder->where('consulta.fecha_consulta <=', $hasta);
+        }
+
+        $data['consultas'] = $builder->findAll();
+
         return view('front/header_admin', $data)
-               .view('backend/verConsultas', $data)
-               .view('front/footer_admin');
+            . view('backend/verConsultas', $data)
+             . view('front/footer_admin');
     }
+
+    public function marcarLeido($id){
+        $consulta = new consulta_model();
+        $consulta->update($id, ['leido' => 1]);
+        return redirect()->back()->with('mensaje', 'Consulta marcada como leída.');
+    }
+
+    public function marcarRespondido($id){
+        $consulta = new consulta_model();
+        $consulta->update($id, ['respondido' => 1]);
+        return redirect()->back()->with('mensaje', 'Consulta marcada como respondida.');
+    }
+
+    public function editarPerfil(){
+        $id = session('id_usuario'); 
+
+        $usuario = new usuario_model(); // 
+        $data['usuario'] = $usuario->where('id_usuario', $id)->first();
+        $data['titulo'] = 'Editar Perfil';
+
+        if (!$data['usuario']) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Usuario no encontrado');
+        }
+
+        return view('front/header', $data)
+            . view('front/editarPerfil', $data)
+            . view('front/footer');
+    }
+
+    public function actualizarPerfil(){
+
+        $id = session('id_usuario');
+
+        $usuarioModel = new usuario_model();
+        $usuarioActual = $usuarioModel->find($id);
+
+        $validation = \Config\Services::validation();
+        $request = \Config\Services::request();
+
+        // Validar si el usuario cambió su nombre de usuario
+        $usuarioIngresado = $request->getPost('usuario');
+        $isUniqueRule = ($usuarioIngresado === $usuarioActual['usuario']) 
+            ? 'required|max_length[100]'
+            : 'required|max_length[100]|is_unique[usuario.usuario]';
+
+        $validation->setRules(
+            [
+                'nombre' => 'required|min_length[3]|max_length[50]',
+                'apellido' => 'required|min_length[3]|max_length[50]',
+                'usuario' => $isUniqueRule,
+                'contraseña' => 'permit_empty|max_length[100]',
+                'confirmar_contraseña' => 'matches[contraseña]'
+            ],
+            [
+                'usuario' => ['is_unique' => 'El usuario ya está registrado'],
+                'confirmar_contraseña' => ['matches' => 'Las contraseñas no coinciden']
+            ]
+        );
+
+        if ($validation->withRequest($request)->run()) {
+            $data = [
+                'nombre_usuario' => $request->getPost('nombre'),
+                'apellido_usuario' => $request->getPost('apellido'),
+                'usuario' => $usuarioIngresado,
+            ];
+
+            // Solo actualiza la contraseña si fue ingresada
+            $nuevaPass = $request->getPost('contraseña');
+            if (!empty($nuevaPass)) {
+                $data['contraseña_usuario'] = password_hash($nuevaPass, PASSWORD_DEFAULT);
+            }
+
+            $usuarioModel->update($id, $data);
+
+            $usuarioActualizado = $usuarioModel->find($id);
+            $session = session();
+            $session->set([
+            'usuario_usuario'   => $usuarioActualizado['usuario'],
+            'nombre_usuario'    => $usuarioActualizado['nombre_usuario'],
+            'apellido_usuario'  => $usuarioActualizado['apellido_usuario'],
+            ]);
+
+            return redirect()->to(base_url('principal'))->with('mensaje', 'Perfil actualizado correctamente.');
+        } else {
+            return redirect()->back()
+                ->withInput()
+                ->with('errors', $validation->getErrors());
+        }
+    }
+
+    public function verMisCompras()
+{
+    $ventaModel   = new venta_model();
+    $detalleModel = new detalle_venta_model();
+
+    $usuarioId = session('id_usuario');
+
+    // Obtener fechas desde el formulario GET
+    $fechaInicio = $this->request->getGet('fecha_inicio');
+    $fechaFin    = $this->request->getGet('fecha_fin');
+
+    // Crear query base
+    $ventaModel->where('cliente_id', $usuarioId);
+
+    // Aplicar filtro de fechas si están presentes
+    if (!empty($fechaInicio) && !empty($fechaFin)) {
+        $ventaModel->where('fecha_venta >=', $fechaInicio)
+                   ->where('fecha_venta <=', $fechaFin);
+    }
+
+    $ventas = $ventaModel
+        ->orderBy('fecha_venta', 'DESC')
+        ->findAll();
+
+    // Agregar detalles de cada venta
+    foreach ($ventas as &$venta) {
+        $venta['detalles'] = $detalleModel
+            ->select('detalle_venta.*, producto.nombre_producto')
+            ->join('producto', 'producto.id_producto = detalle_venta.producto_id')
+            ->where('venta_id', $venta['id_venta'])
+            ->findAll();
+    }
+    unset($venta);
+
+    $data = [
+        'titulo'       => 'Mis Compras',
+        'ventas'       => $ventas,
+        'fecha_inicio' => $fechaInicio,
+        'fecha_fin'    => $fechaFin
+    ];
+
+    return view('front/header', $data)
+         . view('front/verMisCompras', $data)
+         . view('front/footer');
+}
 
 }

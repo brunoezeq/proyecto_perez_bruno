@@ -11,9 +11,9 @@ class consulta_model extends Model
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nombre_consulta', 'mail_consulta', 'asunto_consulta', 'consulta'];
+    protected $allowedFields = ['usuario_id','nombre_consulta', 'mail_consulta', 'asunto_consulta', 'consulta', 'leido', 'respondido', 'fecha_consulta'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

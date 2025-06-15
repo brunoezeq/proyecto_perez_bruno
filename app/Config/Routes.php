@@ -40,40 +40,37 @@ $routes->post('registro', 'UsuarioController::registrarUsuario'); //registrar us
 $routes->post('consulta', 'UsuarioController::registrarConsulta'); //registrar consulta
 $routes->post('verificarUsuario', 'UsuarioController::iniciarSesion'); 
 $routes->get('logout', 'UsuarioController::cerrarSesion'); 
-$routes->get('user_admin', 'UsuarioController::admin'); 
-$routes->get('verConsultas', 'UsuarioController::verConsultas');
+$routes->get('user_admin', 'UsuarioController::admin', ['filter' => 'roladmin']); 
+$routes->get('editarPerfil', 'UsuarioController::editarPerfil', ['filter' => 'auth']); 
+$routes->post('actualizarPerfil', 'UsuarioController::actualizarPerfil', ['filter' => 'auth']); 
+$routes->get('verMisCompras', 'UsuarioController::verMisCompras', ['filter' => 'auth']); 
+
+/* ----- CONSULTAS ----- */
+$routes->get('verConsultas', 'UsuarioController::verConsultas', ['filter' => 'roladmin']);
+$routes->get('marcarLeido/(:num)', 'UsuarioController::marcarLeido/$1', ['filter' => 'roladmin']);
+$routes->get('marcarRespondido/(:num)', 'UsuarioController::marcarRespondido/$1', ['filter' => 'roladmin']);
 
 /* ----- PRODUCTO ----- */
 $routes->get('catalogo', 'ProductoController::mostrarCatalogo'); //muestra vista catálogo
-$routes->get('cargarProducto', 'ProductoController::formularioCargarProducto'); //registra producto
-$routes->post('cargarProducto', 'ProductoController::cargarProducto'); // muestra vista cargar producto
-$routes->get('gestionarProducto', 'ProductoController::gestionarProducto'); //muestra vista gestionar producto
-$routes->get('editarProducto/(:num)', 'ProductoController::editarProducto/$1');
-$routes->post('actualizar', 'ProductoController::actualizarProducto');
-$routes->get('eliminarProducto/(:num)', 'ProductoController::eliminarProducto/$1');
-$routes->get('activarProducto/(:num)', 'ProductoController::activarProducto/$1');
+$routes->get('cargarProducto', 'ProductoController::formularioCargarProducto', ['filter' => 'roladmin']); //registra producto
+$routes->post('cargarProducto', 'ProductoController::cargarProducto', ['filter' => 'roladmin']); // muestra vista cargar producto
+$routes->get('gestionarProducto', 'ProductoController::gestionarProducto', ['filter' => 'roladmin']); //muestra vista gestionar producto
+$routes->get('editarProducto/(:num)', 'ProductoController::editarProducto/$1', ['filter' => 'roladmin']);
+$routes->post('actualizar', 'ProductoController::actualizarProducto', ['filter' => 'roladmin']);
+$routes->get('eliminarProducto/(:num)', 'ProductoController::eliminarProducto/$1', ['filter' => 'roladmin']);
+$routes->get('activarProducto/(:num)', 'ProductoController::activarProducto/$1', ['filter' => 'roladmin']);
 
 /* ----- CARRITO ----- */
-$routes->get('verCarrito', 'CarritoController::verCarrito');
-$routes->post('agregarAlCarrito', 'CarritoController::agregarAlCarrito'); 
-$routes->get('eliminarItem/(:any)', 'CarritoController::eliminarItem/$1');
-$routes->get('vaciarCarrito', 'CarritoController::vaciarCarrito');
+$routes->get('verCarrito', 'CarritoController::verCarrito', ['filter' => 'auth']);
+$routes->post('agregarAlCarrito', 'CarritoController::agregarAlCarrito', ['filter' => 'auth']); 
+$routes->get('eliminarItem/(:any)', 'CarritoController::eliminarItem/$1', ['filter' => 'auth']);
+$routes->get('vaciarCarrito', 'CarritoController::vaciarCarrito', ['filter' => 'auth']);
 
 /* ----- VENTAS ----- */
-$routes->get('ventas', 'VentaController::registrarVenta'); 
-$routes->get('verVentas', 'VentaController::verVentas');
-$routes->get('verDetalle/(:num)', 'VentaController::verDetalle/$1'); 
+$routes->get('ventas', 'VentaController::registrarVenta', ['filter' => 'auth']); 
+$routes->get('verVentas', 'VentaController::verVentas', ['filter' => 'roladmin']);
+$routes->get('verDetalle/(:num)', 'VentaController::verDetalle/$1', ['filter' => 'roladmin']); 
 
 
-/*
-<?php
-
-use CodeIgniter\Router\RouteCollection;
-
-// @var RouteCollection $routes
-$routes->get('/', 'Home::index');
-$routes->get('/', 'Home::contacto');
-$routes->get('/', 'Home::quienes_somos');
- */
 
  
