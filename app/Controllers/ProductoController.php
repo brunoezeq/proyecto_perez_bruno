@@ -197,13 +197,52 @@ class ProductoController extends BaseController{
     }
 
     public function mostrarCatalogo(){
-        $producto = new producto_model();
-        $data['producto'] = $producto->where('estado_producto', 1)->where('stock_producto>', 0)->join('categoria', 'categoria.id_categoria = producto.categoria_producto')->findAll();
-      
+
+        $productoModel = new producto_model();
+
+        $precio = $this->request->getGet('precio');
+        $categoria = $this->request->getGet('categoria');
+
+        $builder = $productoModel->where('estado_producto', 1)
+                                ->where('stock_producto >', 0)
+                                ->join('categoria', 'categoria.id_categoria = producto.categoria_producto');
+
+        if ($precio === 'menos20') {
+            $builder->where('precio_producto <', 20000);
+        } elseif ($precio === 'mas20') {
+            $builder->where('precio_producto >=', 20000);
+        }
+
+        if (!empty($categoria)) {
+            $builder->where('categoria_producto', $categoria);
+        }
+
+        $data['producto'] = $builder->findAll();
+
+        $data['precioSeleccionado'] = $precio;
+        $data['categoriaSeleccionada'] = $categoria;
 
         $data['titulo'] = 'Catálogo';
-        return  view('front/header', $data)
-                . view('front/catalogo')
-                . view('front/footer');
+
+        return view('front/header', $data)
+            . view('front/catalogo')
+            . view('front/footer');
     }
+
+    public function filtrarProductos($precio = null, $categoria = null){
+        $builder = $this->builder();
+
+        if ($precio === 'menos20') {
+            $builder->where('precio <', 20000);
+        } elseif ($precio === 'mas20') {
+            $builder->where('precio >=', 20000);
+        }
+
+        if (!empty($categoria)) {
+            $builder->where('categoria_id', $categoria);
+        }
+
+        return $builder->get()->getResultArray();
+    }
+
 }

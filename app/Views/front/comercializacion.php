@@ -23,7 +23,7 @@
                   <li>Tarjetas de débito y crédito</li>
                   <li>Pago en efectivo en el local</li>
                 </ul>
-                <img src="assets/img/medios_de_pago.jpg" alt="mediosdepago" class="img-fluid pt-4" style="height: 120px;">
+                <img src="assets/img/medios_de_pago.jpg" alt="mediosdepago" class="img-fluid pt-4 text-center" style="height: 120px;">
               </div>
             </div>
 

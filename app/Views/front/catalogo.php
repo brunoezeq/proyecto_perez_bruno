@@ -1,33 +1,51 @@
-<div class="container py-5">
+<!-- Vista catalogo.php -->
+
+<div class="container mt-5">
   <div class="row">
-    <!-- Filtros -->
+
+    <!-- FILTROS -->
     <div class="col-md-3 mb-4">
       <h5>Filtrar por precio</h5>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="precio" id="menos20">
-        <label class="form-check-label" for="menos20">Menos de $20.000</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="precio" id="mas20">
-        <label class="form-check-label" for="mas20">Más de $20.000</label>
-      </div>
 
-      <hr>
+      <!-- Formulario con método GET -->
+      <form method="get" action="<?= base_url('catalogo') ?>">
 
-      <h5>Ordenar por</h5>
-      <select class="form-select">
-        <option value="featured">Todos</option>
-        <option value="bestselling">Cefé</option>
-        <option value="priceLow">Té</option>
-        <option value="priceHigh">Accesorios</option>
-      </select>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="precio" id="menos20" value="menos20"
+            <?= (isset($precioSeleccionado) && $precioSeleccionado === 'menos20') ? 'checked' : '' ?>>
+          <label class="form-check-label" for="menos20">Menos de $20.000</label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="precio" id="mas20" value="mas20"
+            <?= (isset($precioSeleccionado) && $precioSeleccionado === 'mas20') ? 'checked' : '' ?>>
+          <label class="form-check-label" for="mas20">Más de $20.000</label>
+        </div>
+
+        <hr>
+
+        <h5>Filtrar por categoría</h5>
+        <select class="form-select" name="categoria">
+          <option value="">Todas</option>
+          <option value="1" <?= (isset($categoriaSeleccionada) && $categoriaSeleccionada == 1) ? 'selected' : '' ?>>Café</option>
+          <option value="2" <?= (isset($categoriaSeleccionada) && $categoriaSeleccionada == 2) ? 'selected' : '' ?>>Té</option>
+          <option value="3" <?= (isset($categoriaSeleccionada) && $categoriaSeleccionada == 3) ? 'selected' : '' ?>>Accesorios</option>
+        </select>
+
+        <button type="submit" class="btn btn-verde mt-3">Aplicar filtros</button>
+        <a href="<?= base_url('catalogo') ?>" class="btn btn-verde mt-3">Limpiar filtros</a>
+      </form>
     </div>
 
-    <!-- Catálogo -->
+    <!-- CATÁLOGO DE PRODUCTOS -->
     <div class="col-md-9 catalogo">
       <h2>Conoce nuestros productos</h2>
       <div class="container mt-4">
         <div class="row">
+          <?php if (empty($producto)): ?>
+            <p>No se encontraron productos con los filtros seleccionados.</p>
+          <?php endif; ?>
+
           <?php foreach($producto as $producto1): ?>
             <div class="col-md-6 mb-4">
               <div class="card h-100">
@@ -46,14 +64,16 @@
                       <?= form_submit('comprar', 'Agregar al carrito', "class='btn btn-verde mt-2'") ?>
                     <?= form_close() ?>
                   <?php endif; ?>
-                </div> <!-- card-body -->
-              </div> <!-- card -->
-            </div> <!-- col -->
+                </div>
+              </div>
+            </div>
           <?php endforeach; ?>
         </div>
       </div>
     </div>
+    
   </div>
 </div>
+
 
 
