@@ -333,50 +333,49 @@ class UsuarioController extends BaseController{
         }
     }
 
-    public function verMisCompras()
-{
-    $ventaModel   = new venta_model();
-    $detalleModel = new detalle_venta_model();
+    public function verMisCompras(){
+        $ventaModel   = new venta_model();
+        $detalleModel = new detalle_venta_model();
 
-    $usuarioId = session('id_usuario');
+        $usuarioId = session('id_usuario');
 
-    // Obtener fechas desde el formulario GET
-    $fechaInicio = $this->request->getGet('fecha_inicio');
-    $fechaFin    = $this->request->getGet('fecha_fin');
+        // Obtener fechas desde el formulario GET
+        $fechaInicio = $this->request->getGet('fecha_inicio');
+        $fechaFin    = $this->request->getGet('fecha_fin');
 
-    // Crear query base
-    $ventaModel->where('cliente_id', $usuarioId);
+        // Crear query base
+        $ventaModel->where('cliente_id', $usuarioId);
 
-    // Aplicar filtro de fechas si están presentes
-    if (!empty($fechaInicio) && !empty($fechaFin)) {
-        $ventaModel->where('fecha_venta >=', $fechaInicio)
-                   ->where('fecha_venta <=', $fechaFin);
-    }
+        // Aplicar filtro de fechas si están presentes
+        if (!empty($fechaInicio) && !empty($fechaFin)) {
+            $ventaModel->where('fecha_venta >=', $fechaInicio)
+                    ->where('fecha_venta <=', $fechaFin);
+        }
 
-    $ventas = $ventaModel
-        ->orderBy('fecha_venta', 'DESC')
-        ->findAll();
-
-    // Agregar detalles de cada venta
-    foreach ($ventas as &$venta) {
-        $venta['detalles'] = $detalleModel
-            ->select('detalle_venta.*, producto.nombre_producto')
-            ->join('producto', 'producto.id_producto = detalle_venta.producto_id')
-            ->where('venta_id', $venta['id_venta'])
+        $ventas = $ventaModel
+            ->orderBy('fecha_venta', 'DESC')
             ->findAll();
+
+        // Agregar detalles de cada venta
+        foreach ($ventas as &$venta) {
+            $venta['detalles'] = $detalleModel
+                ->select('detalle_venta.*, producto.nombre_producto')
+                ->join('producto', 'producto.id_producto = detalle_venta.producto_id')
+                ->where('venta_id', $venta['id_venta'])
+                ->findAll();
+        } 
+        unset($venta);
+
+        $data = [
+            'titulo'       => 'Mis Compras',
+            'ventas'       => $ventas,
+            'fecha_inicio' => $fechaInicio,
+            'fecha_fin'    => $fechaFin
+        ];
+
+        return view('front/header', $data)
+            . view('front/verMisCompras', $data)
+            . view('front/footer');
     }
-    unset($venta);
-
-    $data = [
-        'titulo'       => 'Mis Compras',
-        'ventas'       => $ventas,
-        'fecha_inicio' => $fechaInicio,
-        'fecha_fin'    => $fechaFin
-    ];
-
-    return view('front/header', $data)
-         . view('front/verMisCompras', $data)
-         . view('front/footer');
-}
 
 }

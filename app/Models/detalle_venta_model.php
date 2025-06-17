@@ -6,14 +6,14 @@ use CodeIgniter\Model;
 class detalle_venta_model extends Model
 {
     protected $table      = 'detalle_venta';
-    protected $primaryKey = 'venta_id';
+    protected $primaryKey = 'id_venta';
 
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['producto_id', 'detalle_cantidad', 'detalle_precio'];
+    protected $allowedFields = ['venta_id', 'producto_id', 'detalle_cantidad', 'detalle_precio'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

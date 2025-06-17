@@ -40,6 +40,13 @@
     <!-- CATÁLOGO DE PRODUCTOS -->
     <div class="col-md-9 catalogo">
       <h2>Conoce nuestros productos</h2>
+
+       <?php if(session('mensaje')): ?>
+        <div class="alert alert-info">
+            <?= session('mensaje') ?>
+        </div>
+        <?php endif; ?>
+
       <div class="container mt-4">
         <div class="row">
           <?php if (empty($producto)): ?>
@@ -54,6 +61,7 @@
                 <div class="card-body text-center">
                   <h5 class="card-title"><?= esc($producto1['nombre_producto']) ?></h5>
                   <p class="card-text"><?= esc($producto1['descripcion_producto']) ?></p>
+                  <p class="card-text"><strong>Stock:</strong><?= esc($producto1['stock_producto']) ?></p>
                   <p class="card-text"><strong>Precio:</strong> $<?= esc($producto1['precio_producto']) ?></p>
 
                   <?php if(session('logueado')): ?>

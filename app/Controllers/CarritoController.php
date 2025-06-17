@@ -5,16 +5,19 @@ use App\Models\producto_model;
 use App\Models\categoria_model;
 use App\Models\venta_model;
 use App\Models\detalle_venta_model;
+use App\Models\medio_pago_model;
 
 class CarritoController extends BaseController{
 
     public function verCarrito(){
         $cart = \Config\Services::cart();
+        $medio_pago = new medio_pago_model();
+        $data['medio_pago'] = $medio_pago->findAll();
         $data['titulo'] = 'Mi Carrito';
         $data['carrito'] = $cart->contents(); 
 
         return view('front/header', $data)
-            . view('front/carrito')
+            . view('front/carrito', $data)
             . view('front/footer');
     }
 

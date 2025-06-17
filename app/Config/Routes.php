@@ -67,7 +67,7 @@ $routes->get('eliminarItem/(:any)', 'CarritoController::eliminarItem/$1', ['filt
 $routes->get('vaciarCarrito', 'CarritoController::vaciarCarrito', ['filter' => 'auth']);
 
 /* ----- VENTAS ----- */
-$routes->get('ventas', 'VentaController::registrarVenta', ['filter' => 'auth']); 
+$routes->post('ventas', 'VentaController::registrarVenta', ['filter' => 'auth']); 
 $routes->get('verVentas', 'VentaController::verVentas', ['filter' => 'roladmin']);
 $routes->get('verDetalle/(:num)', 'VentaController::verDetalle/$1', ['filter' => 'roladmin']); 
 

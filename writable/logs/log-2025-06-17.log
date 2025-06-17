@@ -1,0 +1,775 @@
+DEBUG - 2025-06-17 12:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:08:06 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:08:06 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:08:10 --> Cart Class Initialized
+ERROR - 2025-06-17 12:08:10 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`) ON DELETE CASCADE) in C:\xampp\htdocs\proyecto_perez_bruno\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\proyecto_perez_bruno\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyecto_perez_bruno\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyecto_perez_bruno\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyecto_perez_bruno\app\Controllers\VentaController.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyecto_perez_bruno\system\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+#9 C:\xampp\htdocs\proyecto_perez_bruno\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+#10 C:\xampp\htdocs\proyecto_perez_bruno\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto_perez_bruno\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyecto_perez_bruno\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyecto_perez_bruno\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-17 12:08:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`) ON DELETE CASCADE)
+[Method: GET, Route: ventas]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (:producto_id:, :detalle_cantidad:, :detalle_precio:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\VentaController.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-17 12:08:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (:producto_id:, :detalle_cantidad:, :detalle_precio:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\VentaController.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-17 12:08:10 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`) ON DELETE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (:producto_id:, :detalle_cantidad:, :detalle_precio:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VentaController.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 12:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:16:45 --> Cart Class Initialized
+ERROR - 2025-06-17 12:16:45 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`)) in C:\xampp\htdocs\proyecto_perez_bruno\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\proyecto_perez_bruno\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyecto_perez_bruno\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyecto_perez_bruno\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyecto_perez_bruno\app\Controllers\VentaController.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyecto_perez_bruno\system\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+#9 C:\xampp\htdocs\proyecto_perez_bruno\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+#10 C:\xampp\htdocs\proyecto_perez_bruno\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto_perez_bruno\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyecto_perez_bruno\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyecto_perez_bruno\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-17 12:16:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`))
+[Method: GET, Route: ventas]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (:producto_id:, :detalle_cantidad:, :detalle_precio:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\VentaController.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-17 12:16:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (:producto_id:, :detalle_cantidad:, :detalle_precio:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\VentaController.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-17 12:16:45 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (:producto_id:, :detalle_cantidad:, :detalle_precio:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VentaController.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 12:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:16:46 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:16:48 --> Cart Class Initialized
+ERROR - 2025-06-17 12:16:48 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`)) in C:\xampp\htdocs\proyecto_perez_bruno\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\proyecto_perez_bruno\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\proyecto_perez_bruno\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyecto_perez_bruno\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyecto_perez_bruno\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyecto_perez_bruno\app\Controllers\VentaController.php(55): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyecto_perez_bruno\system\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+#9 C:\xampp\htdocs\proyecto_perez_bruno\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+#10 C:\xampp\htdocs\proyecto_perez_bruno\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto_perez_bruno\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyecto_perez_bruno\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyecto_perez_bruno\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-17 12:16:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`))
+[Method: GET, Route: ventas]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (:producto_id:, :detalle_cantidad:, :detalle_precio:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\VentaController.php(55): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-17 12:16:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (:producto_id:, :detalle_cantidad:, :detalle_precio:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\VentaController.php(55): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-17 12:16:48 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_perez_bruno`.`detalle_venta`, CONSTRAINT `detalle_venta_ibfk_1` FOREIGN KEY (`venta_id`) REFERENCES `venta` (`id_venta`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (\'5\', 1, 25000)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detalle_venta` (`producto_id`, `detalle_cantidad`, `detalle_precio`) VALUES (:producto_id:, :detalle_cantidad:, :detalle_precio:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VentaController.php(55): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 12:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:19:51 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:19:54 --> Cart Class Initialized
+CRITICAL - 2025-06-17 12:19:54 --> CodeIgniter\Database\Exceptions\DataException: There is no primary key defined when trying to make insert.
+[Method: GET, Route: ventas]
+in SYSTEMPATH\Model.php on line 358.
+ 1 SYSTEMPATH\Model.php(358): CodeIgniter\Database\Exceptions\DataException::forEmptyPrimaryKey('insert')
+ 2 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 3 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\VentaController.php(55): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->registrarVenta()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 12:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:21:45 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:22:09 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:22:09 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:22:15 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:22:16 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:22:18 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:27:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:33:11 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:33:11 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:33:17 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:33:17 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:33:22 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:34:25 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:34:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:34:25 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:34:27 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 12:50:27 --> Cart Class Initialized
+DEBUG - 2025-06-17 12:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 12:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:01:17 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:01:17 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:01:21 --> Cart Class Initialized
+ERROR - 2025-06-17 13:01:21 --> An invalid name was submitted as the product name: Remera "Neighbourhood" The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+DEBUG - 2025-06-17 13:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:01:21 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:01:24 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:01:24 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:01:36 --> Cart Class Initialized
+ERROR - 2025-06-17 13:01:36 --> An invalid name was submitted as the product name: Gorra "Neighbourhood" The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+DEBUG - 2025-06-17 13:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:01:36 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:18:28 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:18:29 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:18:47 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:18:48 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:19:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:19:20 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 13:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:54:13 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:54:13 --> Cart Class Initialized
+DEBUG - 2025-06-17 13:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 13:59:54 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:02:57 --> Cart Class Initialized
+CRITICAL - 2025-06-17 14:02:57 --> ErrorException: Undefined variable $medio_pago
+[Method: GET, Route: verCarrito]
+in APPPATH\Views\front\carrito.php on line 80.
+ 1 APPPATH\Views\front\carrito.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $medio_pago', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php', 80)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/carrito', [], true)
+ 5 APPPATH\Controllers\CarritoController.php(17): view('front/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CarritoController->verCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarritoController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:11:23 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:11:23 --> Cart Class Initialized
+CRITICAL - 2025-06-17 14:11:23 --> ErrorException: Undefined variable $medio_pago
+[Method: GET, Route: verCarrito]
+in APPPATH\Views\front\carrito.php on line 80.
+ 1 APPPATH\Views\front\carrito.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $medio_pago', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php', 80)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/carrito', [], true)
+ 5 APPPATH\Controllers\CarritoController.php(17): view('front/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CarritoController->verCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarritoController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:15:56 --> Cart Class Initialized
+CRITICAL - 2025-06-17 14:15:57 --> ErrorException: Undefined variable $medio_pago
+[Method: GET, Route: verCarrito]
+in APPPATH\Views\front\carrito.php on line 80.
+ 1 APPPATH\Views\front\carrito.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $medio_pago', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php', 80)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/carrito', [], true)
+ 5 APPPATH\Controllers\CarritoController.php(17): view('front/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CarritoController->verCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarritoController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:15:58 --> Cart Class Initialized
+CRITICAL - 2025-06-17 14:15:58 --> ErrorException: Undefined variable $medio_pago
+[Method: GET, Route: verCarrito]
+in APPPATH\Views\front\carrito.php on line 80.
+ 1 APPPATH\Views\front\carrito.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $medio_pago', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php', 80)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/carrito', [], true)
+ 5 APPPATH\Controllers\CarritoController.php(17): view('front/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CarritoController->verCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarritoController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:18:41 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:18:41 --> Cart Class Initialized
+CRITICAL - 2025-06-17 14:18:41 --> ErrorException: Undefined variable $medio_pago
+[Method: GET, Route: verCarrito]
+in APPPATH\Views\front\carrito.php on line 80.
+ 1 APPPATH\Views\front\carrito.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $medio_pago', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php', 80)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/carrito', [], true)
+ 5 APPPATH\Controllers\CarritoController.php(17): view('front/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CarritoController->verCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarritoController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:30:10 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:30:10 --> Cart Class Initialized
+CRITICAL - 2025-06-17 14:30:11 --> ErrorException: Undefined variable $medio_pago
+[Method: GET, Route: verCarrito]
+in APPPATH\Views\front\carrito.php on line 71.
+ 1 APPPATH\Views\front\carrito.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $medio_pago', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php', 71)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\front\\carrito.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('front/carrito', [], true)
+ 5 APPPATH\Controllers\CarritoController.php(17): view('front/carrito')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CarritoController->verCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarritoController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:36:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:36:00 --> Cart Class Initialized
+CRITICAL - 2025-06-17 14:36:00 --> Error: Class "App\Controllers\medio_pago_model" not found
+[Method: GET, Route: verCarrito]
+in APPPATH\Controllers\CarritoController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CarritoController->verCarrito()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarritoController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:36:48 --> Cart Class Initialized
+CRITICAL - 2025-06-17 14:36:48 --> Error: Class "App\Controllers\medio_pago_model" not found
+[Method: GET, Route: verCarrito]
+in APPPATH\Controllers\CarritoController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CarritoController->verCarrito()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarritoController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:36:49 --> Cart Class Initialized
+CRITICAL - 2025-06-17 14:36:49 --> Error: Class "App\Controllers\medio_pago_model" not found
+[Method: GET, Route: verCarrito]
+in APPPATH\Controllers\CarritoController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CarritoController->verCarrito()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarritoController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:37:32 --> Cart Class Initialized
+CRITICAL - 2025-06-17 14:37:32 --> Error: Class "App\Controllers\medio_pago_model" not found
+[Method: GET, Route: verCarrito]
+in APPPATH\Controllers\CarritoController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CarritoController->verCarrito()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CarritoController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:40:44 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:41:43 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:41:43 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:41:49 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:41:50 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:41:59 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:42:00 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:42:03 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:42:04 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:42:09 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:42:10 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:42:18 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:42:18 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:42:24 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:42:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:42:25 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:42:30 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:42:30 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:44:31 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:45:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:45:56 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:45:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:45:56 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:46:50 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:46:51 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:46:58 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:49:20 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:49:20 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:49:35 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:51:34 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:51:34 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:51:42 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:52:49 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:52:49 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:52:54 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:52:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:52:55 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:53:03 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 14:54:20 --> Cart Class Initialized
+DEBUG - 2025-06-17 14:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:57:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 14:57:46 --> ErrorException: Undefined array key "documento_cliente"
+[Method: GET, Route: verDetalle/15]
+in APPPATH\Views\backend\verDetalle.php on line 7.
+ 1 APPPATH\Views\backend\verDetalle.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "documento_cliente"', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php', 7)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/verDetalle', [], true)
+ 5 APPPATH\Controllers\VentaController.php(127): view('backend/verDetalle', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->verDetalle('15')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 14:58:19 --> ErrorException: Undefined array key "medio_pago_id.nombre"
+[Method: GET, Route: verDetalle/15]
+in APPPATH\Views\backend\verDetalle.php on line 10.
+ 1 APPPATH\Views\backend\verDetalle.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "medio_pago_id.nombre"', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/verDetalle', [], true)
+ 5 APPPATH\Controllers\VentaController.php(127): view('backend/verDetalle', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->verDetalle('15')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 14:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 14:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 15:00:46 --> ErrorException: Undefined array key "medio_pago_id[nombre]"
+[Method: GET, Route: verDetalle/14]
+in APPPATH\Views\backend\verDetalle.php on line 10.
+ 1 APPPATH\Views\backend\verDetalle.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "medio_pago_id[nombre]"', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/verDetalle', [], true)
+ 5 APPPATH\Controllers\VentaController.php(127): view('backend/verDetalle', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->verDetalle('14')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 15:00:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 15:00:58 --> ErrorException: Undefined array key "medio_pago_id.[nombre]"
+[Method: GET, Route: verDetalle/14]
+in APPPATH\Views\backend\verDetalle.php on line 10.
+ 1 APPPATH\Views\backend\verDetalle.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "medio_pago_id.[nombre]"', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/verDetalle', [], true)
+ 5 APPPATH\Controllers\VentaController.php(127): view('backend/verDetalle', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->verDetalle('14')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 15:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 15:01:47 --> ErrorException: Undefined array key "nombre"
+[Method: GET, Route: verDetalle/14]
+in APPPATH\Views\backend\verDetalle.php on line 10.
+ 1 APPPATH\Views\backend\verDetalle.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php', 10)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/verDetalle', [], true)
+ 5 APPPATH\Controllers\VentaController.php(127): view('backend/verDetalle', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->verDetalle('14')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 15:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 15:12:16 --> Cart Class Initialized
+DEBUG - 2025-06-17 15:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 15:12:16 --> Cart Class Initialized
+DEBUG - 2025-06-17 15:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 15:14:38 --> Cart Class Initialized
+ERROR - 2025-06-17 15:14:38 --> An invalid name was submitted as the product name: Tote Bag "Neighbourhood" The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+DEBUG - 2025-06-17 15:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 15:14:38 --> Cart Class Initialized
+DEBUG - 2025-06-17 15:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 15:14:44 --> Cart Class Initialized
+DEBUG - 2025-06-17 15:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-06-17 15:14:44 --> Cart Class Initialized
+DEBUG - 2025-06-17 15:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 15:18:36 --> ErrorException: Undefined array key "nombre_medio_pago"
+[Method: GET, Route: verDetalle/15]
+in APPPATH\Views\backend\verDetalle.php on line 11.
+ 1 APPPATH\Views\backend\verDetalle.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre_medio_pago"', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/verDetalle', [], true)
+ 5 APPPATH\Controllers\VentaController.php(127): view('backend/verDetalle', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->verDetalle('15')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 15:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 15:18:56 --> ErrorException: Undefined array key "nombre"
+[Method: GET, Route: verDetalle/15]
+in APPPATH\Views\backend\verDetalle.php on line 11.
+ 1 APPPATH\Views\backend\verDetalle.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_perez_bruno\\app\\Views\\backend\\verDetalle.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/verDetalle', [], true)
+ 5 APPPATH\Controllers\VentaController.php(127): view('backend/verDetalle', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->verDetalle('15')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 15:19:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-17 15:19:19 --> TypeError: CodeIgniter\Database\BaseBuilder::select(): Argument #2 ($escape) must be of type ?bool, string given, called in C:\xampp\htdocs\proyecto_perez_bruno\system\Model.php on line 928
+[Method: GET, Route: verDetalle/15]
+in SYSTEMPATH\Database\BaseBuilder.php on line 403.
+ 1 SYSTEMPATH\Model.php(928): CodeIgniter\Database\BaseBuilder->select('venta.*, usuario.nombre_usuario, usuario.apellido_usuario', 'medio_pago.nombre as nombre')
+ 2 APPPATH\Controllers\VentaController.php(114): CodeIgniter\Model->__call('select', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\VentaController->verDetalle('15')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VentaController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-17 15:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-17 15:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

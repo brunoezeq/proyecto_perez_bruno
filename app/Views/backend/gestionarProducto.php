@@ -1,6 +1,11 @@
 <h1 class="text-center my-4" style="color: #143d33;">Productos Cargados</h1>
 
 <div class="container">
+
+    <?php if(session('mensaje')){
+        echo session('mensaje');
+    } ?>
+
     <div class="table-responsive">
         <table id="mytable" class="table table-bordered table-hover align-middle">
             <thead class="table-dark text-center">
