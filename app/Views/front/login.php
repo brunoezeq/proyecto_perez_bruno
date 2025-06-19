@@ -28,6 +28,7 @@
             <label class="form-label">Contraseña</label>
             <?php echo form_password (['name' => "contraseña", 'id' => 'contraseña', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Ingrese su contraseña", 'value'=> set_value('contraseña_usuario')]); ?>
           </div>
+          <p class="text-center"> ¿No te registraste aún? <a href="<?php echo base_url("registro");?>">Registrarse</a></p>
            <?php echo form_submit('submit', 'Iniciar Sesión', "class= 'btn btn-outline-light w-100'"); ?>
       </div>
       <?php echo form_close(); ?>

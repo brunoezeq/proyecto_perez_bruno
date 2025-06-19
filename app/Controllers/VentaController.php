@@ -17,7 +17,7 @@ class VentaController extends BaseController{
         $validation = \Config\Services::validation();
         $cartItems = $cart->contents();
 
-        // Validación de stock
+        
         foreach ($cartItems as $item) {
             $prod = $producto->find($item['id']);
             if (!$prod || $prod['stock_producto'] < $item['qty']) {
@@ -25,7 +25,7 @@ class VentaController extends BaseController{
             }
         }
 
-        // Reglas de validación
+        
         $validation->setRules([
             'documento'   => 'required|min_length[3]|max_length[50]',
             'celular'     => 'required|min_length[3]|max_length[50]',
@@ -42,7 +42,7 @@ class VentaController extends BaseController{
             return redirect()->back()->withInput()->with('mensaje', 'Debe completar los campos.');
         }
 
-        // Insertar venta
+        
         $dataVenta = [
             'cliente_id'  => session('id_usuario'),
             'fecha_venta' => date('Y-m-d'),
@@ -58,7 +58,7 @@ class VentaController extends BaseController{
             return redirect()->route('verCarrito')->with('mensaje', 'Error al registrar la venta.');
         }
 
-        // Insertar detalles y actualizar stock
+        
         foreach ($cartItems as $item) {
             $productoActual = $producto->find($item['id']);
             $nuevo_stock = $productoActual['stock_producto'] - $item['qty'];

@@ -47,7 +47,6 @@ $routes->get('verMisCompras', 'UsuarioController::verMisCompras', ['filter' => '
 
 /* ----- CONSULTAS ----- */
 $routes->get('verConsultas', 'UsuarioController::verConsultas', ['filter' => 'roladmin']);
-$routes->get('marcarLeido/(:num)', 'UsuarioController::marcarLeido/$1', ['filter' => 'roladmin']);
 $routes->get('marcarRespondido/(:num)', 'UsuarioController::marcarRespondido/$1', ['filter' => 'roladmin']);
 
 /* ----- PRODUCTO ----- */

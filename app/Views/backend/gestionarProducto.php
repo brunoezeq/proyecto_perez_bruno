@@ -2,9 +2,11 @@
 
 <div class="container">
 
-    <?php if(session('mensaje')){
-        echo session('mensaje');
-    } ?>
+    <?php if(session('mensaje')): ?>
+        <div class="alert alert-info">
+            <?= session('mensaje') ?>
+        </div>
+    <?php endif; ?>
 
     <div class="table-responsive">
         <table id="mytable" class="table table-bordered table-hover align-middle">

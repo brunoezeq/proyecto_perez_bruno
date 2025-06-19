@@ -181,7 +181,7 @@ class ProductoController extends BaseController{
 
 
     public function eliminarProducto($id){
-        $data = ['estado_producto' => 0]; // Asegurate que el campo se llama así en tu DB
+        $data = ['estado_producto' => 0]; 
         $producto = new producto_model();
         $producto->update($id, $data);
         return redirect()->route('gestionarProducto')->with('mensaje', 'Producto eliminado con éxito');

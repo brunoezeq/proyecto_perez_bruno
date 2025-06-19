@@ -165,13 +165,12 @@ class UsuarioController extends BaseController{
         $usuarioModel = new \App\Models\Usuario_model();
         $usuarioData = $usuarioModel->where('usuario', $usuario)->first();
 
-        // Verificar que exista el usuario y sea un array
         if (is_array($usuarioData) && isset($usuarioData['contraseña_usuario'])) {
-            // Verificar la contraseña
+
             if (password_verify($contrasenia, $usuarioData['contraseña_usuario'])) {
-                // Verificar si el usuario está activo
+
                 if ($usuarioData['estado_usuario'] == 1) {
-                    // Iniciar sesión
+ 
                     $datosSesion = [
                         'id_usuario' => $usuarioData['id_usuario'],
                         'usuario_usuario' => $usuarioData['usuario'],
@@ -182,7 +181,7 @@ class UsuarioController extends BaseController{
 
                     session()->set($datosSesion);
 
-                    // Redirigir según el rol
+                    
                     if ($usuarioData['perfil_id'] == '1') {
                         return redirect()->to('user_admin');
                     } else {
@@ -243,13 +242,7 @@ class UsuarioController extends BaseController{
             . view('backend/verConsultas', $data)
              . view('front/footer_admin');
     }
-
-    public function marcarLeido($id){
-        $consulta = new consulta_model();
-        $consulta->update($id, ['leido' => 1]);
-        return redirect()->back()->with('mensaje', 'Consulta marcada como leída.');
-    }
-
+    
     public function marcarRespondido($id){
         $consulta = new consulta_model();
         $consulta->update($id, ['respondido' => 1]);
@@ -282,7 +275,7 @@ class UsuarioController extends BaseController{
         $validation = \Config\Services::validation();
         $request = \Config\Services::request();
 
-        // Validar si el usuario cambió su nombre de usuario
+        
         $usuarioIngresado = $request->getPost('usuario');
         $isUniqueRule = ($usuarioIngresado === $usuarioActual['usuario']) 
             ? 'required|max_length[100]'
@@ -309,7 +302,6 @@ class UsuarioController extends BaseController{
                 'usuario' => $usuarioIngresado,
             ];
 
-            // Solo actualiza la contraseña si fue ingresada
             $nuevaPass = $request->getPost('contraseña');
             if (!empty($nuevaPass)) {
                 $data['contraseña_usuario'] = password_hash($nuevaPass, PASSWORD_DEFAULT);
@@ -339,14 +331,14 @@ class UsuarioController extends BaseController{
 
         $usuarioId = session('id_usuario');
 
-        // Obtener fechas desde el formulario GET
+        
         $fechaInicio = $this->request->getGet('fecha_inicio');
         $fechaFin    = $this->request->getGet('fecha_fin');
 
-        // Crear query base
+        
         $ventaModel->where('cliente_id', $usuarioId);
 
-        // Aplicar filtro de fechas si están presentes
+        
         if (!empty($fechaInicio) && !empty($fechaFin)) {
             $ventaModel->where('fecha_venta >=', $fechaInicio)
                     ->where('fecha_venta <=', $fechaFin);
@@ -356,7 +348,7 @@ class UsuarioController extends BaseController{
             ->orderBy('fecha_venta', 'DESC')
             ->findAll();
 
-        // Agregar detalles de cada venta
+        
         foreach ($ventas as &$venta) {
             $venta['detalles'] = $detalleModel
                 ->select('detalle_venta.*, producto.nombre_producto')

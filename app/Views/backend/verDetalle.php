@@ -22,14 +22,23 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php $total = 0; ?>
                         <?php foreach ($detalle as $item): ?>
-                        <tr>
-                            <td><?= esc($item['nombre_producto']) ?></td>
-                            <td><?= esc($item['detalle_cantidad']) ?></td>
-                            <td>$<?= number_format($item['detalle_precio'], 2) ?></td>
-                            <td>$<?= number_format($item['detalle_precio'] * $item['detalle_cantidad'], 2) ?></td>
-                        </tr>
+                            <?php 
+                                $subtotal = $item['detalle_precio'] * $item['detalle_cantidad'];
+                                $total += $subtotal;
+                            ?>
+                            <tr>
+                                <td><?= esc($item['nombre_producto']) ?></td>
+                                <td><?= esc($item['detalle_cantidad']) ?></td>
+                                <td>$<?= number_format($item['detalle_precio'], 2) ?></td>
+                                <td>$<?= number_format($subtotal, 2) ?></td>
+                            </tr>
                         <?php endforeach; ?>
+                        <tr class="table-light">
+                            <td colspan="3" class="text-end"><strong>Total de la Venta:</strong></td>
+                            <td><strong>$<?= number_format($total, 2) ?></strong></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

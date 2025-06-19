@@ -1,5 +1,3 @@
-<!-- Vista catalogo.php -->
-
 <div class="container mt-5">
   <div class="row">
 
@@ -7,7 +5,6 @@
     <div class="col-md-3 mb-4">
       <h5>Filtrar por precio</h5>
 
-      <!-- Formulario con método GET -->
       <form method="get" action="<?= base_url('catalogo') ?>">
 
         <div class="form-check">

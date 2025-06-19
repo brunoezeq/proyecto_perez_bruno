@@ -6,7 +6,7 @@
             <div class="card shadow-sm">
                 <div class="card-body">
  
-                    <!-- Errores -->
+                    
                     <?php if (session('errors')): ?>
                         <div class="alert alert-danger">
                             <ul class="mb-0">

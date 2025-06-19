@@ -31,12 +31,11 @@
         </div>
       </div>
 
-      <!-- Logo central -->
+      <!-- Logo  -->
       <div class="my-4">
         <h1 style="font-family: 'Georgia', serif; font-size: 3rem;">Neighbourhood</h1>
       </div>
 
-      <!-- Derechos / Política / Autor -->
       <div class="mb-3 small">
         <p class="mb-1">Derechos de autor Neighbourhood 2025</p>
         <p class="mb-1"><a href="<?php echo base_url("terminos_y_usos");?>">Términos y Usos</a></p>

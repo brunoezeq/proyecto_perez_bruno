@@ -13,7 +13,7 @@ class consulta_model extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['usuario_id','nombre_consulta', 'mail_consulta', 'asunto_consulta', 'consulta', 'leido', 'respondido', 'fecha_consulta'];
+    protected $allowedFields = ['usuario_id','nombre_consulta', 'mail_consulta', 'asunto_consulta', 'consulta', 'respondido', 'fecha_consulta'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

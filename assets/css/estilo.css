@@ -79,6 +79,29 @@
     text-align: right;
 }
 
+/* Fondo del menú desplegable en mobile */
+@media (max-width: 991.98px) {
+  .bg-navbar-mobile {
+    background-color: #143d33 !important;
+    padding: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
+
+  .dropdown-menu {
+    background-color: #0f2d27 !important;
+  }
+
+  .dropdown-menu .dropdown-item {
+    color: white;
+  }
+
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #1c5145;
+  }
+}
    
 /* PRINCIPAL */
    

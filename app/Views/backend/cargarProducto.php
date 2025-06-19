@@ -6,7 +6,7 @@
             <div class="card shadow-sm">
                 <div class="card-body">
 
-                    <!-- Validaciones -->
+                    
                     <?php if (!empty($validation)) : ?>
                         <div class="alert alert-danger">
                             <ul class="mb-0">
@@ -17,7 +17,6 @@
                         </div>
                     <?php endif ?>
 
-                    <!-- Mensaje Flash -->
                     <?php if (session('mensaje')): ?>
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
                             <?= session('mensaje'); ?>
