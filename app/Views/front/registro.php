@@ -23,11 +23,11 @@
         <form class="formulario">
           <div class="mb-3">
             <label class="form-label">Nombre</label>
-             <?php echo form_input (['name' => "nombre", 'id' => 'nombre', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Nombre", 'value'=> set_value('nombre_usuario')]); ?>
+             <?php echo form_input (['name' => "nombre", 'id' => 'nombre', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Nombre", 'value'=> set_value('nombre')]); ?>
           </div>
           <div class="mb-3">
             <label class="form-label">Apellido</label>
-             <?php echo form_input (['name' => "apellido", 'id' => 'apellido', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Apellido", 'value'=> set_value('apellido_usuario')]); ?>
+             <?php echo form_input (['name' => "apellido", 'id' => 'apellido', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Apellido", 'value'=> set_value('apellido')]); ?>
           </div>
           <div class="mb-3">
             <label class="form-label">Usuario</label>
@@ -35,7 +35,7 @@
           </div>
           <div class="mb-3">
             <label class="form-label">Contraseña</label>
-            <?php echo form_password (['name' => "contraseña", 'id' => 'contraseña', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Contraseña", 'value'=> set_value('contraseña_usuario')]); ?>
+            <?php echo form_password (['name' => "contraseña", 'id' => 'contraseña', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Contraseña", 'value'=> set_value('contraseña')]); ?>
           </div>
           <div class="mb-3">
             <label class="form-label">Confirmar Contraseña</label>

@@ -17,7 +17,7 @@
                         </div>
                     <?php endif; ?>
 
-                    <?= form_open(base_url('actualizar')) ?>
+                    <?= form_open_multipart(base_url('actualizar')) ?>
 
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre del Producto</label>
@@ -37,6 +37,11 @@
                             'class' => 'form-control',
                             'value' => $producto['descripcion_producto']
                         ]) ?>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="imagen" class="form-label">Imagen del Producto</label>
+                        <?= form_input(['name' => 'imagen', 'id' => 'imagen', 'class' => 'form-control', 'type' => 'file']) ?>
                     </div>
 
                     <div class="mb-3">

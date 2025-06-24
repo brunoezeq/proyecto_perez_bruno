@@ -8,6 +8,14 @@
         </div>
     <?php endif; ?>
 
+    <form method="get" action="<?= base_url('gestionarProducto') ?>" class="mb-3">
+        <div class="input-group">
+            <input type="text" name="busqueda" class="form-control" placeholder="Buscar por nombre..." value="<?= esc($busqueda ?? '') ?>">
+            <button class="btn btn-primary" type="submit">Buscar</button>
+            <a href="<?= base_url('gestionarProducto') ?>" class="btn btn-secondary">Limpiar</a>
+        </div>
+    </form>
+
     <div class="table-responsive">
         <table id="mytable" class="table table-bordered table-hover align-middle">
             <thead class="table-dark text-center">

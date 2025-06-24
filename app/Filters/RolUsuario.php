@@ -6,14 +6,18 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class RolAdmin implements FilterInterface
+class RolUsuario implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
         $session = session();
 
-        if (!$session->get('logueado') || $session->get('rol_usuario') == 2) {
+        if (!$session->get('logueado')) {
             return redirect()->to('/');
+        }
+
+        if ($session->get('rol_usuario') == 1) {
+            return redirect()->to('user_admin');
         }
     }
 

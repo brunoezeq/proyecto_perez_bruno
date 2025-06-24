@@ -24,17 +24,17 @@
 
         <div class="mb-3">
           <label for="nombre" class="form-label text-white">Nombre</label>
-          <?= form_input(['name' => "nombre", 'id' => 'nombre', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Nombre", 'value' => set_value('nombre_consulta')]) ?>
+          <?= form_input(['name' => "nombre", 'id' => 'nombre', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Nombre", 'value' => set_value('nombre')]) ?>
         </div>
 
         <div class="mb-3">
           <label class="form-label text-white">Email</label>
-          <?= form_input(['name' => "mail", 'id' => 'mail', 'type' => 'text', 'class' => "form-control", 'placeholder' => "ejemplo@gmail.com", 'value' => set_value('mail_consulta')]) ?>
+          <?= form_input(['name' => "mail", 'id' => 'mail', 'type' => 'text', 'class' => "form-control", 'placeholder' => "ejemplo@gmail.com", 'value' => set_value('mail')]) ?>
         </div>
 
         <div class="mb-3">
           <label class="form-label text-white">Asunto</label>
-          <?= form_input(['name' => "asunto", 'id' => 'asunto', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Asunto", 'value' => set_value('asunto_consulta')]) ?>
+          <?= form_input(['name' => "asunto", 'id' => 'asunto', 'type' => 'text', 'class' => "form-control", 'placeholder' => "Asunto", 'value' => set_value('asunto')]) ?>
         </div>
 
         <div class="mb-3">

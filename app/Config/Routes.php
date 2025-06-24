@@ -41,9 +41,9 @@ $routes->post('consulta', 'UsuarioController::registrarConsulta'); //registrar c
 $routes->post('verificarUsuario', 'UsuarioController::iniciarSesion'); 
 $routes->get('logout', 'UsuarioController::cerrarSesion'); 
 $routes->get('user_admin', 'UsuarioController::admin', ['filter' => 'roladmin']); 
-$routes->get('editarPerfil', 'UsuarioController::editarPerfil', ['filter' => 'auth']); 
-$routes->post('actualizarPerfil', 'UsuarioController::actualizarPerfil', ['filter' => 'auth']); 
-$routes->get('verMisCompras', 'UsuarioController::verMisCompras', ['filter' => 'auth']); 
+$routes->get('editarPerfil', 'UsuarioController::editarPerfil', ['filter' => 'rolusuario']); 
+$routes->post('actualizarPerfil', 'UsuarioController::actualizarPerfil', ['filter' => 'rolusuario']); 
+$routes->get('verMisCompras', 'UsuarioController::verMisCompras', ['filter' => 'rolusuario']); 
 
 /* ----- CONSULTAS ----- */
 $routes->get('verConsultas', 'UsuarioController::verConsultas', ['filter' => 'roladmin']);
@@ -60,13 +60,13 @@ $routes->get('eliminarProducto/(:num)', 'ProductoController::eliminarProducto/$1
 $routes->get('activarProducto/(:num)', 'ProductoController::activarProducto/$1', ['filter' => 'roladmin']);
 
 /* ----- CARRITO ----- */
-$routes->get('verCarrito', 'CarritoController::verCarrito', ['filter' => 'auth']);
-$routes->post('agregarAlCarrito', 'CarritoController::agregarAlCarrito', ['filter' => 'auth']); 
-$routes->get('eliminarItem/(:any)', 'CarritoController::eliminarItem/$1', ['filter' => 'auth']);
-$routes->get('vaciarCarrito', 'CarritoController::vaciarCarrito', ['filter' => 'auth']);
+$routes->get('verCarrito', 'CarritoController::verCarrito', ['filter' => 'rolusuario']);
+$routes->post('agregarAlCarrito', 'CarritoController::agregarAlCarrito', ['filter' => 'rolusuario']); 
+$routes->get('eliminarItem/(:any)', 'CarritoController::eliminarItem/$1', ['filter' => 'rolusuario']);
+$routes->get('vaciarCarrito', 'CarritoController::vaciarCarrito', ['filter' => 'rolusuario']);
 
 /* ----- VENTAS ----- */
-$routes->post('ventas', 'VentaController::registrarVenta', ['filter' => 'auth']); 
+$routes->post('ventas', 'VentaController::registrarVenta', ['filter' => 'rolusuario']); 
 $routes->get('verVentas', 'VentaController::verVentas', ['filter' => 'roladmin']);
 $routes->get('verDetalle/(:num)', 'VentaController::verDetalle/$1', ['filter' => 'roladmin']); 
 
